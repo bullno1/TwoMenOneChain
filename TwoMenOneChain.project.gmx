@@ -20,6 +20,7 @@
       <script>scripts\player_move.gml</script>
       <script>scripts\player_on_hit.gml</script>
       <script>scripts\player_update.gml</script>
+      <script>scripts\player_gap.gml</script>
       <script>scripts\player_process_hit.gml</script>
       <scripts name="human">
         <script>scripts\player_init_keyboard_control.gml</script>
