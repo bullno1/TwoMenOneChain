@@ -1,8 +1,10 @@
 //player_init(): Initializes a player's states
 
+globalvar g_leftPlayer, g_rightPlayer, g_caughtObject;
+g_caughtObject = noone;
+
 //look for the other player
 var otherPlayer;
-globalvar leftPlayer, rightPlayer;
 
 with(oPlayer)
 {
@@ -18,9 +20,9 @@ invincible = false;
 
 if(isLeft)
 {
-    leftPlayer = id;
+    g_leftPlayer = id;
 }
 else
 {
-    rightPlayer = id;
+    g_rightPlayer = id;
 }
