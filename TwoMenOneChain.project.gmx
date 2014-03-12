@@ -28,6 +28,7 @@
     <scripts name="grid">
       <script>scripts\grid_draw.gml</script>
       <script>scripts\snap_to_grid.gml</script>
+      <script>scripts\grid_is_snapping.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

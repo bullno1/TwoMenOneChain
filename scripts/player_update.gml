@@ -1,2 +1,5 @@
 //Update a player
-player_move(script_execute(control_script))//TODO: trigger animation
+if(!grid_is_snapping())
+{
+    player_move(script_execute(control_script))//TODO: trigger animation
+}
