@@ -12,5 +12,5 @@ with(oPlayer)
 }
 
 isLeft = x < otherPlayer.x;
-gridPos = (x - LANE_WIDTH/2) div LANE_WIDTH;
 partner = otherPlayer;
+invincible = false

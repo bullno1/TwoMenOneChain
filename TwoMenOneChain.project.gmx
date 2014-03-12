@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprite>sprites\sprRunner</sprite>
     <sprite>sprites\sprGrid</sprite>
+    <sprite>sprites\sprRock</sprite>
+    <sprite>sprites\sprDebugger</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -15,7 +17,9 @@
     <scripts name="player">
       <script>scripts\player_init.gml</script>
       <script>scripts\player_move.gml</script>
+      <script>scripts\player_on_hit.gml</script>
       <script>scripts\player_update.gml</script>
+      <script>scripts\player_process_hit.gml</script>
       <scripts name="human">
         <script>scripts\player_init_keyboard_control.gml</script>
         <script>scripts\player_keyboard_control.gml</script>
@@ -29,6 +33,11 @@
       <script>scripts\grid_draw.gml</script>
       <script>scripts\snap_to_grid.gml</script>
       <script>scripts\grid_is_snapping.gml</script>
+      <script>scripts\world_pos_to_grid.gml</script>
+      <script>scripts\grid_pos_to_world.gml</script>
+    </scripts>
+    <scripts name="fx">
+      <script>scripts\fx_blink.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -37,17 +46,25 @@
     <object>objects\oHumanPlayer</object>
     <object>objects\oAIPlayer</object>
     <object>objects\oGridBound</object>
+    <object>objects\oRock</object>
+    <object>objects\oDebugger</object>
+    <objects name="fx">
+      <object>objects\oBlinker</object>
+    </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="6">
+  <constants number="8">
     <constant name="ROAD_WIDTH">1280</constant>
     <constant name="NUM_LANES">11</constant>
     <constant name="LANE_WIDTH">(ROAD_WIDTH div NUM_LANES)</constant>
     <constant name="SNAP_SPEED">10</constant>
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
+    <constant name="SCROLLING_SPEED">3</constant>
+    <constant name="BLINK_DURATION">1.2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
