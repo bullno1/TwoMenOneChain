@@ -2,6 +2,7 @@
 
 //look for the other player
 var otherPlayer;
+globalvar leftPlayer, rightPlayer;
 
 with(oPlayer)
 {
@@ -13,4 +14,13 @@ with(oPlayer)
 
 isLeft = x < otherPlayer.x;
 partner = otherPlayer;
-invincible = false
+invincible = false;
+
+if(isLeft)
+{
+    leftPlayer = id;
+}
+else
+{
+    rightPlayer = id;
+}

@@ -10,6 +10,7 @@
     <sprite>sprites\sprGrid</sprite>
     <sprite>sprites\sprRock</sprite>
     <sprite>sprites\sprDebugger</sprite>
+    <sprite>sprites\sprBarrel</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -39,6 +40,9 @@
     <scripts name="fx">
       <script>scripts\fx_blink.gml</script>
     </scripts>
+    <scripts name="boss_projectile">
+      <script>scripts\boss_projectile_update.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -46,17 +50,21 @@
     <object>objects\oHumanPlayer</object>
     <object>objects\oAIPlayer</object>
     <object>objects\oGridBound</object>
-    <object>objects\oRock</object>
     <object>objects\oDebugger</object>
     <objects name="fx">
       <object>objects\oBlinker</object>
     </objects>
+    <objects name="threats">
+      <object>objects\oRock</object>
+      <object>objects\oBossProjectile</object>
+      <object>objects\oHarmful</object>
+    </objects>
+    <object>objects\oPlayerProjectile</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="8">
+  <constants number="9">
     <constant name="ROAD_WIDTH">1280</constant>
     <constant name="NUM_LANES">11</constant>
     <constant name="LANE_WIDTH">(ROAD_WIDTH div NUM_LANES)</constant>
@@ -64,6 +72,7 @@
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
     <constant name="SCROLLING_SPEED">3</constant>
+    <constant name="BOSS_THROW_SPEED">4</constant>
     <constant name="BLINK_DURATION">1.2</constant>
   </constants>
   <help>
