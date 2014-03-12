@@ -39,15 +39,15 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_init_keyboard_control</script>
+            <script>player_init_ai_control</script>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>vk_left</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>vk_right</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>

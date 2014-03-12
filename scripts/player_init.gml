@@ -1,16 +1,16 @@
-//player_init()
+//player_init(): Initializes a player's states
 
 //look for the other player
 var otherPlayer;
 
 with(oPlayer)
 {
-    if(self != other)
+    if(id != other.id)
     {
-        otherPlayer = self;
+        otherPlayer = id;
     }
 }
 
-self.isLeft = x < otherPlayer.x;
-self.gridPos = (x - LANE_WIDTH/2) div LANE_WIDTH;
-self.partner = otherPlayer;
+isLeft = x < otherPlayer.x;
+gridPos = (x - LANE_WIDTH/2) div LANE_WIDTH;
+partner = otherPlayer;
