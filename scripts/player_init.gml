@@ -17,6 +17,7 @@ with(oPlayer)
 isLeft = x < otherPlayer.x;
 partner = otherPlayer;
 invincible = false;
+wasSnapping = false;
 
 if(isLeft)
 {
