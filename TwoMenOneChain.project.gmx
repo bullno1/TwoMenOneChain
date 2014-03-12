@@ -36,6 +36,7 @@
     <object>objects\oGrid</object>
     <object>objects\oHumanPlayer</object>
     <object>objects\oAIPlayer</object>
+    <object>objects\oGridBound</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
