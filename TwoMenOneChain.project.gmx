@@ -27,8 +27,10 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="2">
-    <constant name="LANE_WIDTH">116</constant>
+  <constants number="4">
+    <constant name="ROAD_WIDTH">1280</constant>
+    <constant name="NUM_LANES">11</constant>
+    <constant name="LANE_WIDTH">ROAD_WIDTH div NUM_LANES</constant>
     <constant name="GRID_COLOR">make_color(0, 0, 0)</constant>
   </constants>
   <help>
