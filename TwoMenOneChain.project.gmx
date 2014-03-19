@@ -85,12 +85,13 @@
       <script>scripts\boss_projectile_update.gml</script>
     </scripts>
     <scripts name="system">
-      <script>scripts\game_init.gml</script>
       <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\on_lose_game.gml</script>
       <scripts name="level">
         <scripts name="generation">
+          <script>scripts\map_generate_random_chunk.gml</script>
           <script>scripts\map_generate_chunk.gml</script>
+          <script>scripts\map_generate_prompted_chunk.gml</script>
         </scripts>
         <scripts name="loading">
           <script>scripts\map_load_chunks.gml</script>

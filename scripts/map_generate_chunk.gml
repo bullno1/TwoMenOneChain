@@ -1,12 +1,9 @@
-//generate a level chunk from a specified collection of chunks
-
 var MAP_EMPTY = ord('_');
 var MAP_HIGH_OBSTACLE = ord('|');
 var MAP_LOW_OBSTACLE = ord('o');
 
-var chunkIndex = irandom(ds_list_size(argument0) - 1);
-show_debug_message("Generate chunk " + string(chunkIndex));
-var chunk = ds_list_find_value(argument0, chunkIndex);
+show_debug_message("Generate chunk " + string(argument1));
+var chunk = ds_list_find_value(argument0, argument1);
 
 var chunkHeight = ds_grid_height(chunk);
 var startY = -chunkHeight * OBSTACLE_HEIGHT - GENERATION_MARGIN;
@@ -34,5 +31,4 @@ for(var gridY = 0; gridY < chunkHeight; ++gridY)
     }
 }
 
-//Setup next generation
-alarm[0] = -startY / SCROLLING_SPEED;
+return -startY;
