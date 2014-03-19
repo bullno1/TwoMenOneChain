@@ -2,6 +2,8 @@
 
 globalvar g_leftPlayer, g_rightPlayer, g_caughtObject;
 g_caughtObject = noone;
+health = MAX_HP;
+y = room_height - (health - 1) * HP_DISTANCE;
 
 //look for the other player
 var otherPlayer;

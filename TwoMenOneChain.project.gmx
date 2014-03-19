@@ -45,6 +45,9 @@
     <scripts name="boss_projectile">
       <script>scripts\boss_projectile_update.gml</script>
     </scripts>
+    <scripts name="system">
+      <script>scripts\on_lose_game.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="system">
@@ -70,7 +73,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="10">
+  <constants number="12">
     <constant name="ROAD_WIDTH">1280</constant>
     <constant name="NUM_LANES">11</constant>
     <constant name="LANE_WIDTH">(ROAD_WIDTH div NUM_LANES)</constant>
@@ -81,6 +84,8 @@
     <constant name="BOSS_THROW_SPEED">4</constant>
     <constant name="BLINK_DURATION">1.2</constant>
     <constant name="LAUNCH_SPEED">5</constant>
+    <constant name="MAX_HP">3</constant>
+    <constant name="HP_DISTANCE">20</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
