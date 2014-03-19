@@ -3,7 +3,46 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="4" name="datafiles"/>
+  <datafiles number="6" name="datafiles">
+    <datafiles number="6" name="MapChunks">
+      <datafiles number="6" name="easy">
+        <datafile>
+          <name>00.txt</name>
+          <exists>-1</exists>
+          <size>180</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>49385710</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>00.txt</filename>
+        </datafile>
+        <datafile>
+          <name>01.txt</name>
+          <exists>-1</exists>
+          <size>39</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>01.txt</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -46,7 +85,20 @@
       <script>scripts\boss_projectile_update.gml</script>
     </scripts>
     <scripts name="system">
+      <script>scripts\game_init.gml</script>
+      <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\on_lose_game.gml</script>
+      <scripts name="level">
+        <scripts name="generation">
+          <script>scripts\map_generate_chunk.gml</script>
+        </scripts>
+        <scripts name="loading">
+          <script>scripts\map_load_chunks.gml</script>
+          <script>scripts\map_load_chunks_in_folder.gml</script>
+          <script>scripts\map_load_chunk_from_file.gml</script>
+          <script>scripts\map_is_valid_symbol.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -54,6 +106,7 @@
       <object>objects\oGridBound</object>
       <object>objects\oDebugger</object>
       <object>objects\oGrid</object>
+      <object>objects\oObstacleSpawner</object>
     </objects>
     <objects name="characters">
       <object>objects\oPlayer</object>
@@ -73,7 +126,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="12">
+  <constants number="14">
     <constant name="ROAD_WIDTH">1280</constant>
     <constant name="NUM_LANES">11</constant>
     <constant name="LANE_WIDTH">(ROAD_WIDTH div NUM_LANES)</constant>
@@ -86,6 +139,8 @@
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
     <constant name="HP_DISTANCE">20</constant>
+    <constant name="OBSTACLE_HEIGHT">98</constant>
+    <constant name="GENERATION_MARGIN">20</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
