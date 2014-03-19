@@ -47,7 +47,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="characters">
-      <sprite>sprites\sprRunner</sprite>
+      <sprite>sprites\sprNega</sprite>
+      <sprite>sprites\sprPosi</sprite>
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
