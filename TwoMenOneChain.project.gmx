@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="4" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -46,21 +47,25 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\oPlayer</object>
-    <object>objects\oGrid</object>
-    <object>objects\oHumanPlayer</object>
-    <object>objects\oAIPlayer</object>
-    <object>objects\oGridBound</object>
-    <object>objects\oDebugger</object>
+    <objects name="system">
+      <object>objects\oGridBound</object>
+      <object>objects\oDebugger</object>
+      <object>objects\oGrid</object>
+    </objects>
+    <objects name="characters">
+      <object>objects\oPlayer</object>
+      <object>objects\oHumanPlayer</object>
+      <object>objects\oAIPlayer</object>
+    </objects>
     <objects name="fx">
       <object>objects\oBlinker</object>
     </objects>
-    <objects name="threats">
+    <objects name="objects">
       <object>objects\oRock</object>
       <object>objects\oBossProjectile</object>
       <object>objects\oHarmful</object>
+      <object>objects\oPlayerProjectile</object>
     </objects>
-    <object>objects\oPlayerProjectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
