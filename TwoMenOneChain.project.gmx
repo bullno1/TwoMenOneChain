@@ -46,11 +46,17 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprRunner</sprite>
-    <sprite>sprites\sprGrid</sprite>
-    <sprite>sprites\sprRock</sprite>
-    <sprite>sprites\sprDebugger</sprite>
-    <sprite>sprites\sprBarrel</sprite>
+    <sprites name="characters">
+      <sprite>sprites\sprRunner</sprite>
+    </sprites>
+    <sprites name="objects">
+      <sprite>sprites\sprRock</sprite>
+      <sprite>sprites\sprBarrel</sprite>
+    </sprites>
+    <sprites name="system">
+      <sprite>sprites\sprDebugger</sprite>
+      <sprite>sprites\sprGrid</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
