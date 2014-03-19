@@ -55,6 +55,7 @@
     <instance objName="oAIPlayer" x="290" y="650" name="inst_176C35A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDebugger" x="61" y="-31" name="inst_CF0A5C88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oObstacleSpawner" x="116" y="-65" name="inst_2A3BF36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBoss" x="635" y="203" name="inst_BC86C352" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

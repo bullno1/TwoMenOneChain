@@ -49,6 +49,7 @@
     <sprites name="characters">
       <sprite>sprites\sprNega</sprite>
       <sprite>sprites\sprPosi</sprite>
+      <sprite>sprites\sprBoss</sprite>
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
@@ -120,6 +121,7 @@
       <object>objects\oPlayer</object>
       <object>objects\oHumanPlayer</object>
       <object>objects\oAIPlayer</object>
+      <object>objects\oBoss</object>
     </objects>
     <objects name="fx">
       <object>objects\oBlinker</object>
