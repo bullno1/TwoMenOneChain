@@ -53,6 +53,7 @@
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
+      <sprite>sprites\sprPole</sprite>
       <sprite>sprites\sprBarrel</sprite>
     </sprites>
     <sprites name="system">
@@ -91,6 +92,8 @@
     </scripts>
     <scripts name="boss_projectile">
       <script>scripts\boss_projectile_update.gml</script>
+      <script>scripts\instance_crossed_chain.gml</script>
+      <script>scripts\pole_update.gml</script>
     </scripts>
     <scripts name="system">
       <script>scripts\destroy_if_flying_out.gml</script>
@@ -131,6 +134,7 @@
       <object>objects\oBossProjectile</object>
       <object>objects\oHarmful</object>
       <object>objects\oPlayerProjectile</object>
+      <object>objects\oPole</object>
     </objects>
   </objects>
   <rooms name="rooms">

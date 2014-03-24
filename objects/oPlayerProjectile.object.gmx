@@ -8,7 +8,7 @@
   <parentName>oGridBound</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="oBoss">
+    <event eventtype="4" ename="oHarmful">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -24,7 +24,7 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="oHarmful">
+    <event eventtype="4" ename="oBoss">
       <action>
         <libid>1</libid>
         <id>203</id>

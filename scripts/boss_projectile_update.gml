@@ -1,9 +1,4 @@
-var chainPos = oPlayer.y;
-
-var betweenPlayers = g_leftPlayer.gridPos < gridPos && gridPos < g_rightPlayer.gridPos;
-var crossedChain = yprevious < chainPos && chainPos <= y;
-
-if(crossedChain && betweenPlayers)
+if(instance_crossed_chain())
 {
     vspeed = 0;
     if(instance_exists(g_caughtObject))//if players are holding another object
