@@ -7,6 +7,11 @@ if(!grid_is_snapping())
         blockedMoveDirection = moveDirection;
         alarm[1] = 60;
     }
+    else if(moveDirection != 0)
+    {
+        blockedMoveDirection = 0;
+        alarm[1] = -1;
+    }
 }
 
 //Check whether object can be launched
