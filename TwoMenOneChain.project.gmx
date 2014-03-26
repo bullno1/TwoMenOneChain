@@ -77,7 +77,9 @@
       </scripts>
       <scripts name="ai">
         <script>scripts\player_init_ai_control.gml</script>
-        <script>scripts\player_ai_control.gml</script>
+        <script>scripts\ai_control.gml</script>
+        <script>scripts\ai_draw.gml</script>
+        <script>scripts\ai_reset_states.gml</script>
       </scripts>
     </scripts>
     <scripts name="grid">
@@ -152,7 +154,7 @@
     <constant name="BLINK_DURATION">1.2</constant>
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
-    <constant name="HP_DISTANCE">20</constant>
+    <constant name="HP_DISTANCE">30</constant>
     <constant name="OBSTACLE_HEIGHT">98</constant>
     <constant name="GENERATION_MARGIN">20</constant>
   </constants>
