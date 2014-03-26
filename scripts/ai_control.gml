@@ -15,13 +15,39 @@ with(oHarmful)
     }
 }
 
+for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
+{
+    if(instance_place(x + (decisionIndex - 1) * LANE_WIDTH, y, oHarmful) != noone)
+    {
+        decisionPenalties[decisionIndex] = -room_height;
+    }
+    else
+    {
+        decisionPenalties[decisionIndex] = 0;
+    }
+}
+
+var minLane, maxLane;
+var partnerLane = world_pos_to_grid(partner.x);
+if(isLeft)
+{
+    minLane = max(0, partnerLane - CHAIN_LIMIT - 1);
+    maxLane = partner.gridPos;
+}
+else
+{
+    minLane = max(partnerLane + 1, NUM_LANES - 1);
+    maxlane = min(NUM_LANES, parterlane + CHAIN_LIMIT);
+}
+
 //evaluate each lane
 var currentLane = world_pos_to_grid(x);
-for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
+for(var laneIndex = minLane; laneIndex < maxLane; ++laneIndex)
 {
     var moveDirection = sign(laneIndex - currentLane);
     var decisionIndex = moveDirection + 1;
-    var laneScore = threatDistances[laneIndex];
+    var laneScore = (threatDistances[laneIndex] + decisionPenalties[decisionIndex]) / (abs(laneIndex - currentLane) + 1);
+    laneScores[laneIndex] = laneScore;
     if(laneScore > moveScores[decisionIndex])
     {
         moveScores[decisionIndex] = laneScore;

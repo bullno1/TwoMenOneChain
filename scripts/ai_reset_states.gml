@@ -6,5 +6,6 @@ for(var i = 0; i < 3; ++i)
 for(var i = 0; i < NUM_LANES; ++i)
 {
     laneThreats[i] = noone;
-    threatDistances[i] = 9999;
+    threatDistances[i] = y;    
+    laneScores[i] = -9999;
 }
