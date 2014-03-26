@@ -304,6 +304,7 @@
     <scripts name="system">
       <script>scripts\restart_game.gml</script>
       <script>scripts\destroy_if_flying_out.gml</script>
+      <script>scripts\execute_next_frame.gml</script>
       <script>scripts\on_lose_game.gml</script>
       <scripts name="level">
         <scripts name="generation">
@@ -318,7 +319,6 @@
           <script>scripts\map_is_valid_symbol.gml</script>
         </scripts>
       </scripts>
-      <script>scripts\execute_next_frame.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

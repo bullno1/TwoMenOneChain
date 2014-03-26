@@ -64,15 +64,16 @@ for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
         chainBonus = -200;
     break;
     default:
-        chainBonus = -300;
+        chainBonus = -250;
     break;
     }
     if((isLeft && laneIndex >= partnerLane) || (!isLeft && laneIndex <= partnerLane))
     {
-        chainBonus = -350;
+        chainBonus = -250;
     }
-        
-    var laneScore = threatDistances[laneIndex] + decisionPenalties[decisionIndex] + chainBonus;
+    
+    var nextLane = currentLane + moveDirection;
+    var laneScore = threatDistances[laneIndex] + threatDistances[nextLane] + chainBonus;
     laneScores[laneIndex] = laneScore;
     if(laneScore > moveScores[decisionIndex])
     {
