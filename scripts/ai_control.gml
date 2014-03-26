@@ -46,7 +46,7 @@ for(var laneIndex = minLane; laneIndex < maxLane; ++laneIndex)
 {
     var moveDirection = sign(laneIndex - currentLane);
     var decisionIndex = moveDirection + 1;
-    var laneScore = (threatDistances[laneIndex] + decisionPenalties[decisionIndex]) / (abs(laneIndex - currentLane) + 1);
+    var laneScore = (threatDistances[laneIndex] + decisionPenalties[decisionIndex]);
     laneScores[laneIndex] = laneScore;
     if(laneScore > moveScores[decisionIndex])
     {
