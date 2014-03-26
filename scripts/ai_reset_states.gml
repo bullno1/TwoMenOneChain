@@ -7,5 +7,5 @@ for(var i = 0; i < NUM_LANES; ++i)
 {
     laneThreats[i] = noone;
     threatDistances[i] = y;    
-    laneScores[i] = -9999;
+    laneScores[i] = 0;
 }
