@@ -3,7 +3,7 @@ ai_reset_states();
 //locate all nearest threats in every lane
 with(oHarmful)
 {
-    if(bbox_bottom > 50 && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_bottom > 0 && bbox_top < other.bbox_bottom) //if relevant
     {
         var distance = other.y - y;
         var gridPos = world_pos_to_grid(x);
@@ -42,7 +42,7 @@ else
 
 //evaluate each lane
 var currentLane = world_pos_to_grid(x);
-for(var laneIndex = minLane; laneIndex < maxLane; ++laneIndex)
+for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
 {
     var moveDirection = sign(laneIndex - currentLane);
     var decisionIndex = moveDirection + 1;
@@ -61,8 +61,15 @@ for(var laneIndex = minLane; laneIndex < maxLane; ++laneIndex)
         chainBonus = 50;
     break;
     case 3:
+        chainBonus = -200;
+    break;
+    default:
         chainBonus = -300;
     break;
+    }
+    if((isLeft && laneIndex >= partnerLane) || (!isLeft && laneIndex <= partnerLane))
+    {
+        chainBonus = -350;
     }
         
     var laneScore = threatDistances[laneIndex] + decisionPenalties[decisionIndex] + chainBonus;
