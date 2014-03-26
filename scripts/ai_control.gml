@@ -3,7 +3,7 @@ ai_reset_states();
 //locate all nearest threats in every lane
 with(oHarmful)
 {
-    if(bbox_bottom > 200 && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_bottom > 50 && bbox_top < other.bbox_bottom) //if relevant
     {
         var distance = other.y - y;
         var gridPos = world_pos_to_grid(x);
@@ -17,9 +17,9 @@ with(oHarmful)
 
 for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 {
-    if(instance_place(x + (decisionIndex - 1) * LANE_WIDTH, y, oHarmful) != noone)
+    if(instance_place(x + (decisionIndex - 1) * LANE_WIDTH / 2, y - SCROLLING_SPEED * (LANE_WIDTH / SNAP_SPEED / 2), oHarmful) != noone)
     {
-        decisionPenalties[decisionIndex] = -300;
+        decisionPenalties[decisionIndex] = -room_height;
     }
     else
     {
@@ -37,7 +37,7 @@ if(isLeft)
 else
 {
     minLane = max(partnerLane + 1, NUM_LANES - 1);
-    maxlane = min(NUM_LANES, parterlane + CHAIN_LIMIT);
+    maxLane = min(NUM_LANES, partnerLane + CHAIN_LIMIT + 2);
 }
 
 //evaluate each lane
@@ -48,19 +48,20 @@ for(var laneIndex = minLane; laneIndex < maxLane; ++laneIndex)
     var decisionIndex = moveDirection + 1;
     var chainLength = abs(laneIndex - partnerLane) - 1;
     var chainBonus = 0;
+    lanePenalties[laneIndex] = decisionPenalties[decisionIndex];
     switch(chainLength)
     {
     case 0:
         chainBonus = -50;
     break;
     case 1:
-        chainBonus = 300;
-    break;
-    case 2:
         chainBonus = 100;
     break;
+    case 2:
+        chainBonus = 50;
+    break;
     case 3:
-        chainBonus = -200;
+        chainBonus = -300;
     break;
     }
         
