@@ -3,7 +3,7 @@
 //returns whether the move is allowed
 
 var moveDirection = argument0;
-if(moveDirection == 0) exit;
+if(moveDirection == 0) return true;
 
 var nextGridPos = gridPos + moveDirection;
 

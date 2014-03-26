@@ -275,6 +275,7 @@
       <script>scripts\player_update.gml</script>
       <script>scripts\player_gap.gml</script>
       <script>scripts\player_process_hit.gml</script>
+      <script>scripts\player_draw.gml</script>
       <scripts name="human">
         <script>scripts\player_init_keyboard_control.gml</script>
         <script>scripts\player_keyboard_control.gml</script>

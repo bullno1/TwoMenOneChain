@@ -20,6 +20,7 @@ isLeft = x < otherPlayer.x;
 partner = otherPlayer;
 invincible = false;
 wasSnapping = false;
+blockedMoveDirection = 0;
 
 if(isLeft)
 {

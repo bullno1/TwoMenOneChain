@@ -1,7 +1,12 @@
 //Update a player
 if(!grid_is_snapping())
 {
-    player_move(script_execute(control_script))//TODO: trigger animation
+    var moveDirection = script_execute(control_script);
+    if(!player_move(moveDirection))
+    {
+        blockedMoveDirection = moveDirection;
+        alarm[1] = 60;
+    }
 }
 
 //Check whether object can be launched
