@@ -52,7 +52,7 @@ for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
     switch(chainLength)
     {
     case 0:
-        chainBonus = -50;
+        chainBonus = -100;
     break;
     case 1:
         chainBonus = 100;
@@ -61,7 +61,7 @@ for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
         chainBonus = 50;
     break;
     case 3:
-        chainBonus = -200;
+        chainBonus = -160;
     break;
     default:
         chainBonus = -250;
