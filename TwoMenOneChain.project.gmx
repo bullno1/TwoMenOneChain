@@ -264,6 +264,12 @@
       <sprite>sprites\sprDebugger</sprite>
       <sprite>sprites\sprGrid</sprite>
     </sprites>
+    <sprites name="chain">
+      <sprite>sprites\sprChain0</sprite>
+      <sprite>sprites\sprChain1</sprite>
+      <sprite>sprites\sprChain2</sprite>
+      <sprite>sprites\sprChain3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -276,6 +282,7 @@
       <script>scripts\player_gap.gml</script>
       <script>scripts\player_process_hit.gml</script>
       <script>scripts\player_draw.gml</script>
+      <script>scripts\chain_draw.gml</script>
       <scripts name="human">
         <script>scripts\player_init_keyboard_control.gml</script>
         <script>scripts\player_keyboard_control.gml</script>
@@ -335,6 +342,7 @@
       <object>objects\oHumanPlayer</object>
       <object>objects\oAIPlayer</object>
       <object>objects\oBoss</object>
+      <object>objects\oChain</object>
     </objects>
     <objects name="fx">
       <object>objects\oBlinker</object>
