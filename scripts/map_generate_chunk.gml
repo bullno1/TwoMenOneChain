@@ -21,7 +21,7 @@ for(var gridY = 0; gridY < chunkHeight; ++gridY)
                 instance_create(grid_pos_to_world(gridX), startY + gridY * OBSTACLE_HEIGHT, oRock);
             break;
             case MAP_HIGH_OBSTACLE:
-                instance_create(grid_pos_to_world(gridX), startY + gridY * OBSTACLE_HEIGHT, oRock);
+                instance_create(grid_pos_to_world(gridX), startY + gridY * OBSTACLE_HEIGHT, oPole);
             break;
 
             default:
