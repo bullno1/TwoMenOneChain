@@ -1,5 +1,5 @@
 var drawX = grid_pos_to_world(g_leftPlayer.gridPos);
-var drawY = g_leftPlayer.y - 50;
+var drawY = g_leftPlayer.y - 10;
 var sprite = sprChain0;
 
 switch(player_gap())

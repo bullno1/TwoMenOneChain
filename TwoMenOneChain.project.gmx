@@ -7,7 +7,7 @@
     <datafiles number="19" name="MapChunks">
       <datafiles number="19" name="easy">
         <datafile>
-          <name>01.txt</name>
+          <name>c01.txt</name>
           <exists>-1</exists>
           <size>39</size>
           <exportAction>2</exportAction>
@@ -18,13 +18,13 @@
           <store>0</store>
           <ConfigOptions>
             <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
+              <CopyToMask>49385710</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>01.txt</filename>
+          <filename>c01.txt</filename>
         </datafile>
         <datafile>
-          <name>02.txt</name>
+          <name>c02.txt</name>
           <exists>-1</exists>
           <size>83</size>
           <exportAction>2</exportAction>
@@ -38,10 +38,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>02.txt</filename>
+          <filename>c02.txt</filename>
         </datafile>
         <datafile>
-          <name>03.txt</name>
+          <name>c03.txt</name>
           <exists>-1</exists>
           <size>96</size>
           <exportAction>2</exportAction>
@@ -55,10 +55,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>03.txt</filename>
+          <filename>c03.txt</filename>
         </datafile>
         <datafile>
-          <name>04.txt</name>
+          <name>c04.txt</name>
           <exists>-1</exists>
           <size>97</size>
           <exportAction>2</exportAction>
@@ -72,10 +72,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>04.txt</filename>
+          <filename>c04.txt</filename>
         </datafile>
         <datafile>
-          <name>05.txt</name>
+          <name>c05.txt</name>
           <exists>-1</exists>
           <size>145</size>
           <exportAction>2</exportAction>
@@ -89,10 +89,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>05.txt</filename>
+          <filename>c05.txt</filename>
         </datafile>
         <datafile>
-          <name>06.txt</name>
+          <name>c06.txt</name>
           <exists>-1</exists>
           <size>145</size>
           <exportAction>2</exportAction>
@@ -103,13 +103,13 @@
           <store>0</store>
           <ConfigOptions>
             <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
+              <CopyToMask>49385710</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>06.txt</filename>
+          <filename>c06.txt</filename>
         </datafile>
         <datafile>
-          <name>07.txt</name>
+          <name>c07.txt</name>
           <exists>-1</exists>
           <size>133</size>
           <exportAction>2</exportAction>
@@ -123,10 +123,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>07.txt</filename>
+          <filename>c07.txt</filename>
         </datafile>
         <datafile>
-          <name>08.txt</name>
+          <name>c08.txt</name>
           <exists>-1</exists>
           <size>119</size>
           <exportAction>2</exportAction>
@@ -140,10 +140,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>08.txt</filename>
+          <filename>c08.txt</filename>
         </datafile>
         <datafile>
-          <name>09.txt</name>
+          <name>c09.txt</name>
           <exists>-1</exists>
           <size>119</size>
           <exportAction>2</exportAction>
@@ -157,10 +157,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>09.txt</filename>
+          <filename>c09.txt</filename>
         </datafile>
         <datafile>
-          <name>10.txt</name>
+          <name>c10.txt</name>
           <exists>-1</exists>
           <size>227</size>
           <exportAction>2</exportAction>
@@ -174,10 +174,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>10.txt</filename>
+          <filename>c10.txt</filename>
         </datafile>
         <datafile>
-          <name>11.txt</name>
+          <name>c11.txt</name>
           <exists>-1</exists>
           <size>157</size>
           <exportAction>2</exportAction>
@@ -191,10 +191,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>11.txt</filename>
+          <filename>c11.txt</filename>
         </datafile>
         <datafile>
-          <name>12.txt</name>
+          <name>c12.txt</name>
           <exists>-1</exists>
           <size>145</size>
           <exportAction>2</exportAction>
@@ -208,10 +208,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>12.txt</filename>
+          <filename>c12.txt</filename>
         </datafile>
         <datafile>
-          <name>13.txt</name>
+          <name>c13.txt</name>
           <exists>-1</exists>
           <size>157</size>
           <exportAction>2</exportAction>
@@ -225,10 +225,10 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>13.txt</filename>
+          <filename>c13.txt</filename>
         </datafile>
         <datafile>
-          <name>14.txt</name>
+          <name>c14.txt</name>
           <exists>-1</exists>
           <size>157</size>
           <exportAction>2</exportAction>
@@ -242,7 +242,7 @@
               <CopyToMask>49385710</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>14.txt</filename>
+          <filename>c14.txt</filename>
         </datafile>
       </datafiles>
     </datafiles>

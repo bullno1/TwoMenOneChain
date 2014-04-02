@@ -5,7 +5,6 @@ with(oHarmful)
 {
     if(bbox_bottom > oBoss.y && bbox_top < other.bbox_bottom) //if relevant
     {
-        show_debug_message(string(gridPos));
         var distance = other.y - y;
         if(distance < other.threatDistances[gridPos])
         {
