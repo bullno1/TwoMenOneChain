@@ -3,10 +3,10 @@ ai_reset_states();
 //locate all nearest threats in every lane
 with(oHarmful)
 {
-    if(bbox_bottom > 0 && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_bottom > oBoss.y && bbox_top < other.bbox_bottom) //if relevant
     {
+        show_debug_message(string(gridPos));
         var distance = other.y - y;
-        var gridPos = world_pos_to_grid(x);
         if(distance < other.threatDistances[gridPos])
         {
             other.threatDistances[gridPos] = distance;
@@ -28,7 +28,7 @@ for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 }
 
 var minLane, maxLane;
-var partnerLane = world_pos_to_grid(partner.x);
+var partnerLane = partner.gridPos;
 if(isLeft)
 {
     minLane = max(0, partnerLane - CHAIN_LIMIT - 1);

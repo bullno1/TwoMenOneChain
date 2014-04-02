@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gridPos = x div LANE_WIDTH;
+            <string>gridPos = world_pos_to_grid(x);
 </string>
           </argument>
         </arguments>

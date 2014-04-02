@@ -358,10 +358,11 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="14">
-    <constant name="ROAD_WIDTH">1280</constant>
+  <constants number="15">
+    <constant name="ROAD_WIDTH">770</constant>
     <constant name="NUM_LANES">11</constant>
-    <constant name="LANE_WIDTH">(ROAD_WIDTH div NUM_LANES)</constant>
+    <constant name="LANE_WIDTH">77</constant>
+    <constant name="ROAD_START">255</constant>
     <constant name="SNAP_SPEED">20</constant>
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
@@ -371,7 +372,7 @@
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
     <constant name="HP_DISTANCE">60</constant>
-    <constant name="OBSTACLE_HEIGHT">90</constant>
+    <constant name="OBSTACLE_HEIGHT">50</constant>
     <constant name="GENERATION_MARGIN">20</constant>
   </constants>
   <help>

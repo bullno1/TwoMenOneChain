@@ -1,4 +1,4 @@
-var drawX = g_leftPlayer.gridPos * LANE_WIDTH + LANE_WIDTH / 2
+var drawX = grid_pos_to_world(g_leftPlayer.gridPos);
 var drawY = g_leftPlayer.y - 50;
 var sprite = sprChain0;
 
