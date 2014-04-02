@@ -310,6 +310,7 @@
       <script>scripts\pole_update.gml</script>
     </scripts>
     <scripts name="system">
+      <script>scripts\game_toggle_pause.gml</script>
       <script>scripts\restart_game.gml</script>
       <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\execute_next_frame.gml</script>
@@ -332,7 +333,7 @@
   <objects name="objects">
     <objects name="system">
       <object>objects\oGridBound</object>
-      <object>objects\oDebugger</object>
+      <object>objects\oController</object>
       <object>objects\oGrid</object>
       <object>objects\oObstacleSpawner</object>
       <object>objects\oExecutor</object>
