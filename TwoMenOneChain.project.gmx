@@ -370,7 +370,7 @@
     <constant name="BLINK_DURATION">1.2</constant>
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
-    <constant name="HP_DISTANCE">30</constant>
+    <constant name="HP_DISTANCE">60</constant>
     <constant name="OBSTACLE_HEIGHT">90</constant>
     <constant name="GENERATION_MARGIN">20</constant>
   </constants>
