@@ -1,5 +1,3 @@
 health = MAX_HP;
-with(oPlayer)
-{
-    y = room_height - (health - 1) * HP_DISTANCE;
-}
+g_leftPlayer.y = room_height - (health - 1) * HP_DISTANCE;
+g_rightPlayer.y = room_height - (health - 1) * HP_DISTANCE;

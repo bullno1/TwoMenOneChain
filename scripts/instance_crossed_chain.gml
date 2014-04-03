@@ -1,6 +1,7 @@
-var chainPos = oPlayer.y;
+if(!instance_exists(id)) return false;
+var chainPos = g_leftPlayer.y;
 
-var betweenPlayers = g_leftPlayer.gridPos < gridPos && gridPos < g_rightPlayer.gridPos;
+var betweenPlayers = g_leftPlayer.x < x && x < g_rightPlayer.x;
 var crossedChain = yprevious < chainPos && chainPos <= y;
 
 return betweenPlayers && crossedChain;

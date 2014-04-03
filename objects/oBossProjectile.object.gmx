@@ -39,7 +39,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>SCROLLING_SPEED</string>
+            <string>BOSS_PROJECTILE_SPEED</string>
           </argument>
         </arguments>
       </action>

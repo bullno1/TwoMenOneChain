@@ -1,10 +1,18 @@
 if(!invincible)
 {
     invincible = true;
-    y += HP_DISTANCE;
+    y = min(room_height, y + HP_DISTANCE);
+    if(instance_exists(g_caughtObject))
+    {
+        with(g_caughtObject)
+        {
+            instance_destroy();
+        }
+    }
+    
     if(isLeft)
     {
-        health -= 1;
+        health = max(0, health - 1);
         if(health == 0)
         {
             on_lose_game();

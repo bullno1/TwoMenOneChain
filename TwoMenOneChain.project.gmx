@@ -567,6 +567,9 @@
         </scripts>
       </scripts>
     </scripts>
+    <scripts name="boss">
+      <script>scripts\boss_move.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="system">
@@ -605,8 +608,8 @@
     <constant name="SNAP_SPEED">20</constant>
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
-    <constant name="SCROLLING_SPEED">3</constant>
-    <constant name="BOSS_THROW_SPEED">4</constant>
+    <constant name="SCROLLING_SPEED">2</constant>
+    <constant name="BOSS_PROJECTILE_SPEED">6</constant>
     <constant name="BLINK_DURATION">1.2</constant>
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
