@@ -574,6 +574,9 @@
     <scripts name="boss">
       <script>scripts\boss_move.gml</script>
     </scripts>
+    <scripts name="level_editor">
+      <script>scripts\level_editor_scroll.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="system">
@@ -582,6 +585,7 @@
       <object>objects\oGrid</object>
       <object>objects\oObstacleSpawner</object>
       <object>objects\oExecutor</object>
+      <object>objects\oDepthSorted</object>
     </objects>
     <objects name="characters">
       <object>objects\oPlayer</object>
@@ -601,9 +605,14 @@
       <object>objects\oPole</object>
       <object>objects\oElectric</object>
     </objects>
+    <objects name="level_editor">
+      <object>objects\oEditor</object>
+      <object>objects\oTile</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\editor</room>
   </rooms>
   <constants number="15">
     <constant name="ROAD_WIDTH">561</constant>
