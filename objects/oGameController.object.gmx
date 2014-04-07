@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>currentDifficulty = 0;
+chunkQueue = ds_queue_create();
 alarm[0] = 1;
 </string>
           </argument>
@@ -49,9 +50,20 @@ alarm[0] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var top = -map_generate_random_chunk(currentDifficulty);
+            <string>var top;
+if(ds_queue_empty(chunkQueue))
+{
+    top = -map_generate_random_chunk(currentDifficulty);
+}
+else
+{
+    var currentSet = g_mapChunks[currentDifficulty];
+    var chunk = ds_list_find_value(currentSet, ds_queue_dequeue(chunkQueue));
+    top = -map_generate_chunk(chunk);
+}
+
 var timeToEnd = top / SCROLLING_SPEED;
-alarm[0] = timeToEnd + GENERATION_DELAY + room_height / SCROLLING_SPEED;
+alarm[0] = timeToEnd + room_height / SCROLLING_SPEED;
 </string>
           </argument>
         </arguments>
@@ -98,6 +110,34 @@ alarm[0] = timeToEnd + GENERATION_DELAY + room_height / SCROLLING_SPEED;
           <argument>
             <kind>1</kind>
             <string>room_goto(rmEditor)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var numChunks = real(get_string("Enter number of patterns", "1"));
+
+for(var i = 0; i &lt; numChunks; ++i)
+{
+    ds_queue_enqueue(chunkQueue, real(get_string("Enter pattern " + string(i + 1) + ":", "1")) - 1);
+}
 </string>
           </argument>
         </arguments>
