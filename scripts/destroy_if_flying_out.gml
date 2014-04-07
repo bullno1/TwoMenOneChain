@@ -3,10 +3,12 @@ var top = y - sprite_yoffset;
 var bottom = top + sprite_height;
 var left = x - sprite_xoffset;
 var right = x + sprite_width;
-var flyLeft = right < 0 && x < xprevious;
-var flyRight = left > room_width && x > xprevious;
-var flyUp = bottom < 0 && y < yprevious;
-var flyDown = top > room_height && y > yprevious;
+var flyLeft = right < 0 && hspeed < 0;
+var flyRight = left > room_width && hspeed > 0;
+var flyUp = bottom < 0 && vspeed < 0;
+var flyDown = top > room_height && vspeed > 0;
 
 if(flyLeft || flyRight || flyUp || flyDown)
+{
     instance_destroy();
+}

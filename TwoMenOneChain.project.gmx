@@ -3,487 +3,58 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="33" name="datafiles">
-    <datafiles number="33" name="MapChunks">
-      <datafiles number="33" name="easy">
-        <datafile>
-          <name>c01.txt</name>
-          <exists>-1</exists>
-          <size>39</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>49385710</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c01.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c02.txt</name>
-          <exists>-1</exists>
-          <size>83</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c02.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c03.txt</name>
-          <exists>-1</exists>
-          <size>96</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c03.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c04.txt</name>
-          <exists>-1</exists>
-          <size>97</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c04.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c05.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c05.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c06.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>49385710</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c06.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c07.txt</name>
-          <exists>-1</exists>
-          <size>133</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c07.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c08.txt</name>
-          <exists>-1</exists>
-          <size>119</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c08.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c09.txt</name>
-          <exists>-1</exists>
-          <size>119</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c09.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c10.txt</name>
-          <exists>-1</exists>
-          <size>227</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c10.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c11.txt</name>
-          <exists>-1</exists>
-          <size>157</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c11.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c12.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c12.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c13.txt</name>
-          <exists>-1</exists>
-          <size>157</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c13.txt</filename>
-        </datafile>
-        <datafile>
-          <name>c14.txt</name>
-          <exists>-1</exists>
-          <size>157</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>49385710</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>c14.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p01.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p01.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p02.txt</name>
-          <exists>-1</exists>
-          <size>83</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p02.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p03.txt</name>
-          <exists>-1</exists>
-          <size>96</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p03.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p04.txt</name>
-          <exists>-1</exists>
-          <size>97</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p04.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p05.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p05.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p06.txt</name>
-          <exists>-1</exists>
-          <size>145</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p06.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p07.txt</name>
-          <exists>-1</exists>
-          <size>133</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p07.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p08.txt</name>
-          <exists>-1</exists>
-          <size>119</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p08.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p09.txt</name>
-          <exists>-1</exists>
-          <size>119</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p09.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p10.txt</name>
-          <exists>-1</exists>
-          <size>227</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p10.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p11.txt</name>
-          <exists>-1</exists>
-          <size>157</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p11.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p12.txt</name>
-          <exists>-1</exists>
-          <size>144</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p12.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p13.txt</name>
-          <exists>-1</exists>
-          <size>156</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>9223372036854775807</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p13.txt</filename>
-        </datafile>
-        <datafile>
-          <name>p14.txt</name>
-          <exists>-1</exists>
-          <size>157</size>
-          <exportAction>2</exportAction>
-          <exportDir></exportDir>
-          <overwrite>0</overwrite>
-          <freeData>-1</freeData>
-          <removeEnd>0</removeEnd>
-          <store>0</store>
-          <ConfigOptions>
-            <Config name="Default">
-              <CopyToMask>49385710</CopyToMask>
-            </Config>
-          </ConfigOptions>
-          <filename>p14.txt</filename>
-        </datafile>
-      </datafiles>
-    </datafiles>
+  <datafiles number="36" name="datafiles">
+    <datafile>
+      <name>easy_chunks</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>easy_chunks</filename>
+    </datafile>
+    <datafile>
+      <name>hard_chunks</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>hard_chunks</filename>
+    </datafile>
+    <datafile>
+      <name>medium_chunks</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>49385710</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>medium_chunks</filename>
+    </datafile>
   </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
@@ -556,26 +127,31 @@
       <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\execute_next_frame.gml</script>
       <script>scripts\on_lose_game.gml</script>
+      <script>scripts\ensure_surface_exists.gml</script>
       <scripts name="level">
         <scripts name="generation">
           <script>scripts\map_generate_random_chunk.gml</script>
           <script>scripts\map_generate_chunk.gml</script>
-          <script>scripts\map_generate_prompted_chunk.gml</script>
         </scripts>
         <scripts name="loading">
-          <script>scripts\map_load_chunks.gml</script>
-          <script>scripts\map_load_chunks_in_folder.gml</script>
-          <script>scripts\map_load_chunk_from_file.gml</script>
-          <script>scripts\map_is_valid_symbol.gml</script>
+          <script>scripts\map_load_all_chunks.gml</script>
+          <script>scripts\map_load_chunks_from_file.gml</script>
+        </scripts>
+        <scripts name="saving">
+          <script>scripts\map_save_all_chunks.gml</script>
+          <script>scripts\map_save_chunks_to_file.gml</script>
         </scripts>
       </scripts>
-      <script>scripts\ensure_surface_exists.gml</script>
     </scripts>
     <scripts name="boss">
       <script>scripts\boss_move.gml</script>
     </scripts>
     <scripts name="level_editor">
       <script>scripts\level_editor_scroll.gml</script>
+      <script>scripts\level_editor_change_current.gml</script>
+      <script>scripts\level_editor_save.gml</script>
+      <script>scripts\level_editor_get_num_levels.gml</script>
+      <script>scripts\level_editor_load.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -583,9 +159,9 @@
       <object>objects\oGridBound</object>
       <object>objects\oPause</object>
       <object>objects\oGrid</object>
-      <object>objects\oObstacleSpawner</object>
       <object>objects\oExecutor</object>
       <object>objects\oDepthSorted</object>
+      <object>objects\oGameController</object>
     </objects>
     <objects name="characters">
       <object>objects\oPlayer</object>
@@ -611,8 +187,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\editor</room>
+    <room>rooms\rmGame</room>
+    <room>rooms\rmEditor</room>
   </rooms>
   <constants number="15">
     <constant name="ROAD_WIDTH">561</constant>
@@ -628,8 +204,8 @@
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
     <constant name="HP_DISTANCE">50</constant>
-    <constant name="OBSTACLE_HEIGHT">51</constant>
-    <constant name="GENERATION_MARGIN">20</constant>
+    <constant name="OBSTACLE_HEIGHT">31</constant>
+    <constant name="GENERATION_DELAY">120</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -1,7 +1,10 @@
 //generate a random level chunk from a specified collection of chunks
+var chunks = g_mapChunks[argument0];
+var chunkIndex = irandom(ds_list_size(chunks) - 1);
+if(chunkIndex >= ds_list_size(chunks))
+{
+    return 0;
+}
+var chunk = ds_list_find_value(chunks, chunkIndex);
 
-var chunkIndex = irandom(ds_list_size(argument0) - 1);
-var chunkHeight = map_generate_chunk(argument0, chunkIndex);
-
-//Setup next generation
-alarm[0] = chunkHeight / SCROLLING_SPEED;
+return map_generate_chunk(chunk);

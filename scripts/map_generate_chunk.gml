@@ -1,34 +1,24 @@
-var MAP_EMPTY = ord('_');
-var MAP_HIGH_OBSTACLE = ord('|');
-var MAP_LOW_OBSTACLE = ord('o');
-
-show_debug_message("Generate chunk " + string(argument1));
-var chunk = ds_list_find_value(argument0, argument1);
-
-var chunkHeight = ds_grid_height(chunk);
-var startY = -chunkHeight * OBSTACLE_HEIGHT - GENERATION_MARGIN;
-
-for(var gridY = 0; gridY < chunkHeight; ++gridY)
+var chunk = argument0;
+var numObjs = ds_grid_height(chunk) - 1;
+var minY = 0;
+for(var objIndex = 0; objIndex < numObjs; ++objIndex)
 {
-    for(var gridX = 0; gridX < NUM_LANES; ++gridX)
+    var objX = grid_pos_to_world(ds_grid_get(chunk, 0, objIndex));
+    var objY = ds_grid_get(chunk, 1, objIndex);
+    var objType = ds_grid_get(chunk, 2, objIndex);
+    
+    var obj;
+    if(objType == 0)
     {
-        var element = ds_grid_get(chunk, gridX, gridY);
-        switch(element)
-        {
-            case MAP_EMPTY:
-            break;
-            case MAP_LOW_OBSTACLE:
-                instance_create(grid_pos_to_world(gridX), startY + gridY * OBSTACLE_HEIGHT, oRock);
-            break;
-            case MAP_HIGH_OBSTACLE:
-                instance_create(grid_pos_to_world(gridX), startY + gridY * OBSTACLE_HEIGHT, oPole);
-            break;
-
-            default:
-                show_error("Unrecognized map symbol: " + chr(element), false);
-            break;
-        }
+        obj = oRock;
     }
+    else
+    {
+        obj = oPole;
+    }
+    
+    var instance = instance_create(objX, objY, obj);
+    minY = min(minY, objY);
 }
 
-return -startY;
+return minY;
