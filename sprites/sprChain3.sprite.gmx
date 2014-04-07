@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>319</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>17</bbox_bottom>
+  <bbox_left>36</bbox_left>
+  <bbox_right>217</bbox_right>
+  <bbox_top>16</bbox_top>
+  <bbox_bottom>27</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>320</width>
-  <height>18</height>
+  <width>255</width>
+  <height>51</height>
   <frames>
     <frame index="0">images\sprChain3_0.png</frame>
   </frames>

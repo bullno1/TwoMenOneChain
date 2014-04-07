@@ -489,14 +489,15 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="characters">
-      <sprite>sprites\sprNega</sprite>
       <sprite>sprites\sprPosi</sprite>
+      <sprite>sprites\sprNega</sprite>
       <sprite>sprites\sprBoss</sprite>
+      <sprite>sprites\sprBossShadow</sprite>
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprPole</sprite>
-      <sprite>sprites\sprBarrel</sprite>
+      <sprite>sprites\sprEnergyBall</sprite>
     </sprites>
     <sprites name="system">
       <sprite>sprites\sprDebugger</sprite>
@@ -508,8 +509,11 @@
       <sprite>sprites\sprChain2</sprite>
       <sprite>sprites\sprChain3</sprite>
     </sprites>
+    <sprite>sprites\sprElectric</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgRun</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="player">
@@ -595,16 +599,17 @@
       <object>objects\oHarmful</object>
       <object>objects\oPlayerProjectile</object>
       <object>objects\oPole</object>
+      <object>objects\oElectric</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
   <constants number="15">
-    <constant name="ROAD_WIDTH">770</constant>
+    <constant name="ROAD_WIDTH">561</constant>
     <constant name="NUM_LANES">11</constant>
-    <constant name="LANE_WIDTH">77</constant>
-    <constant name="ROAD_START">255</constant>
+    <constant name="LANE_WIDTH">51</constant>
+    <constant name="ROAD_START">360</constant>
     <constant name="SNAP_SPEED">20</constant>
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
@@ -613,8 +618,8 @@
     <constant name="BLINK_DURATION">1.2</constant>
     <constant name="LAUNCH_SPEED">5</constant>
     <constant name="MAX_HP">3</constant>
-    <constant name="HP_DISTANCE">60</constant>
-    <constant name="OBSTACLE_HEIGHT">50</constant>
+    <constant name="HP_DISTANCE">50</constant>
+    <constant name="OBSTACLE_HEIGHT">51</constant>
     <constant name="GENERATION_MARGIN">20</constant>
   </constants>
   <help>
