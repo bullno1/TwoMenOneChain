@@ -552,7 +552,6 @@
       <script>scripts\pole_update.gml</script>
     </scripts>
     <scripts name="system">
-      <script>scripts\game_toggle_pause.gml</script>
       <script>scripts\restart_game.gml</script>
       <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\execute_next_frame.gml</script>
@@ -570,6 +569,7 @@
           <script>scripts\map_is_valid_symbol.gml</script>
         </scripts>
       </scripts>
+      <script>scripts\ensure_surface_exists.gml</script>
     </scripts>
     <scripts name="boss">
       <script>scripts\boss_move.gml</script>
@@ -578,7 +578,7 @@
   <objects name="objects">
     <objects name="system">
       <object>objects\oGridBound</object>
-      <object>objects\oController</object>
+      <object>objects\oPause</object>
       <object>objects\oGrid</object>
       <object>objects\oObstacleSpawner</object>
       <object>objects\oExecutor</object>
