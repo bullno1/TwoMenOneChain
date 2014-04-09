@@ -172,4 +172,15 @@ for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
     }
 }
 
-return bestDecision - 1;
+//Prevent jerking
+var currentTime = current_time;
+if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 800)//two conflicting decisions
+{
+    return 0;
+}
+else
+{
+    lastDecision = bestDecision;
+    lastMoveTime = currentTime;
+    return bestDecision - 1;
+}
