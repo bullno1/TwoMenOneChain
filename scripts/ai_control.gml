@@ -132,7 +132,7 @@ for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
             var projectilePos = bossProjectile.gridPos;
             if(poleMin < projectilePos && projectilePos < poleMax && poleMax - poleMin < 3 && bossProjectile.y < y)//can catch
             {
-                bossProjectileBonus = 10;
+                bossProjectileBonus = 5;
             }
             else if(projectilePos == myLane || projectilePos == partnerLane)//dodge
             {
@@ -160,6 +160,7 @@ var reachedEdge = isLeft && gridPos == 0;
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = isLeft && playerGap == 3;
+var safeScore = 300;
 
 if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge)//Can't move left
 {
@@ -172,11 +173,11 @@ else
     {
         bestLeftScore = max(bestLeftScore, laneScores[laneIndex]);
     }
-    decisionScores[0] = min(bestLeftScore, 300);
+    decisionScores[0] = min(bestLeftScore, safeScore);
 }
 
 //consider staying
-decisionScores[1] = min(laneScores[gridPos], 370);
+decisionScores[1] = min(laneScores[gridPos], safeScore);
 
 //consider moving right
 var reachedEdge = !isLeft && gridPos == NUM_LANES - 1;
@@ -195,11 +196,35 @@ else
     {
         bestRightScore = max(bestRightScore, laneScores[laneIndex]);
     }
-    decisionScores[2] = min(bestRightScore, 370);
+    decisionScores[2] = min(bestRightScore, safeScore);
 }
 
+//Add more weight to adjust distance between players
 if(holdingObject)
 {
+    var bossPos = oBoss.gridPos;
+    if(isLeft)
+    {
+        if(playerGap == 1 && bossPos < gridPos)
+        {
+            decisionScores[0] += 1;
+        }
+        else if(playerGap == 2 && bossPos > gridPos)
+        {
+            decisionScores[2] += 1;
+        }
+    }
+    else
+    {
+        if(playerGap == 1 && bossPos > gridPos)
+        {
+            decisionScores[2] += 1;
+        }
+        else if(playerGap == 2 && bossPos < gridPos)
+        {
+            decisionScores[0] += 1;
+        }
+    }
 }
 else
 {
