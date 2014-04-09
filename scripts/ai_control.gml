@@ -115,25 +115,61 @@ for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
     laneScores[myLane] = comboSum / (partnerMax - partnerMin + 1);
 }
 
-//find the best lane to move towards
-//Assume current lane is best to avoid unnecesasry movement
-var bestScore = laneScores[gridPos];
-var bestLane = gridPos;
-for(var i = 0; i < NUM_LANES; ++i)
-{
-    if(laneScores[i] > bestScore)
-    {
-        bestScore = laneScores[i];
-        bestLane = i;
-    }
-}
-
 for(var i = 0; i < NUM_LANES; ++i)
 {
     debug_vars[i] = threatDistances[i];
     debug_vars2[i] = laneScores[i];
 }
 
-debug_var_head = partnerMax;
+var decisionScores;
+var playerGap = player_gap();
 
-return sign(bestLane - gridPos);
+//consider moving left
+var blockedByPartner = !isLeft && playerGap == 0;
+var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
+if(blockedByPartner || blockedByObject)//Can't move left
+{
+    decisionScores[0] = 0;
+}
+else
+{
+    var bestLeftScore = 0;
+    for(var laneIndex = 0; laneIndex < gridPos; ++laneIndex)
+    {
+        bestLeftScore = max(bestLeftScore, laneScores[laneIndex]);
+    }
+    decisionScores[0] = bestLeftScore;
+}
+
+//consider staying
+decisionScores[1] = laneScores[gridPos];
+
+//consider moving right
+var blockedByPartner = isLeft && playerGap == 0;
+var blockedByObject = isLeft && playerGap == 1 && holdingObject;
+if(blockedByPartner || blockedByObject)//Can't move right
+{
+    decisionScores[2] = 0;
+}
+else
+{
+    var bestRightScore = 0;
+    for(var laneIndex = gridPos + 1; laneIndex < NUM_LANES; ++laneIndex)
+    {
+        bestRightScore = max(bestRightScore, laneScores[laneIndex]);
+    }
+    decisionScores[2] = bestRightScore;
+}
+
+var bestScore = decisionScores[1];
+var bestDecision = 1;
+for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
+{
+    if(decisionScores[decisionIndex] > bestScore)
+    {
+        bestScore = decisionScores[decisionIndex];
+        bestDecision = decisionIndex;
+    }
+}
+
+return bestDecision - 1;
