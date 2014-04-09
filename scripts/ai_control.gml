@@ -152,7 +152,6 @@ for(var i = 0; i < NUM_LANES; ++i)
     debug_vars2[i] = laneScores[i];
 }
 
-var decisionScores;
 var playerGap = player_gap();
 
 //consider moving left

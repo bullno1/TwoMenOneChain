@@ -7,3 +7,8 @@ for(var i = 0; i < NUM_LANES; ++i)
 {
     laneScores[i] = 0;
 }
+
+for(var i = 0; i < 3; ++i)
+{
+    decisionScores[i] = 0;
+}
