@@ -133,8 +133,9 @@ var playerGap = player_gap();
 //consider moving left
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
+var stoppedByChain = isLeft && playerGap == 3;
 
-if(blockedByPartner || blockedByObject)//Can't move left
+if(blockedByPartner || blockedByObject || stoppedByChain)//Can't move left
 {
     decisionScores[0] = 0;
 }
@@ -154,7 +155,9 @@ decisionScores[1] = laneScores[gridPos];
 //consider moving right
 var blockedByPartner = isLeft && playerGap == 0;
 var blockedByObject = isLeft && playerGap == 1 && holdingObject;
-if(blockedByPartner || blockedByObject)//Can't move right
+var stoppedByChain = !isLeft && playerGap == 3;
+
+if(blockedByPartner || blockedByObject || stoppedByChain)//Can't move right
 {
     decisionScores[2] = 0;
 }
