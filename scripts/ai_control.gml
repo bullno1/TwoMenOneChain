@@ -1,3 +1,9 @@
+var currentTime = current_time;
+if(currentTime - lastMoveTime < 100)
+{
+    return 0;
+}
+
 var laneThreats, threatDistances, poleDistances;
 
 for(var i = 0; i < NUM_LANES; ++i)
@@ -127,6 +133,7 @@ var playerGap = player_gap();
 //consider moving left
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
+
 if(blockedByPartner || blockedByObject)//Can't move left
 {
     decisionScores[0] = 0;
@@ -173,7 +180,6 @@ for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 }
 
 //Prevent jerking
-var currentTime = current_time;
 if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 800)//two conflicting decisions
 {
     return 0;
