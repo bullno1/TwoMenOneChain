@@ -63,7 +63,7 @@ else
 }
 
 var timeToEnd = top / SCROLLING_SPEED;
-alarm[0] = timeToEnd + room_height / SCROLLING_SPEED;
+alarm[0] = timeToEnd + room_height / SCROLLING_SPEED + 60;
 </string>
           </argument>
         </arguments>
@@ -138,6 +138,13 @@ for(var i = 0; i &lt; numChunks; ++i)
 {
     ds_queue_enqueue(chunkQueue, real(get_string("Enter pattern " + string(i + 1) + ":", "1")) - 1);
 }
+
+with(oHarmful)
+{
+    instance_destroy();
+}
+
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
