@@ -26,10 +26,11 @@ with(oHarmful)
     }
 }
 
-//evaluate each lane
+//evaluate each position combination
 var holdingObject = instance_exists(g_caughtObject);
-var myMinLane, myMaxLane;
 
+//find personal range
+var myMinLane, myMaxLane;
 if(isLeft)
 {
     myMinLane = 0;
@@ -56,20 +57,16 @@ else
     myMaxLane = NUM_LANES - 1;
 }
 
-var laneScores;
 for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
 {
     laneScores[laneIndex] = 0;
 }
 
-
 for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
 {
-    //consider myself
     var laneScore = 0;
-    laneScore += threatDistances[myLane];
- 
-    //consider partner
+
+    //find partner range
     var partnerMin, partnerMax;
     if(isLeft)
     {
@@ -95,15 +92,27 @@ for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
             partnerMax = myLane - 1;
         }
     }
-    
-    var partnerSum = 0;
+
+    var comboSum = 0;
+    var personalSafety = threatDistances[myLane];
+    //for every combination of my position and partner's position
     for(var partnerLane = partnerMin; partnerLane <= partnerMax; ++partnerLane)
     {
-        partnerSum += threatDistances[partnerLane];    
+        var partnerSafety = threatDistances[partnerLane];
+        
+        //consider poles between
+        var nearestPole = room_height;
+        var poleMin = min(myLane, partnerLane);
+        var poleMax = max(myLane, partnerLane);
+        for(var poleLane = poleMin; poleLane <= poleMax; ++poleLane)
+        {
+            nearestPole = min(nearestPole, poleDistances[poleLane]);
+        }
+
+        comboSum += min(personalSafety, partnerSafety, nearestPole);
     }
-    laneScore += partnerSum / (partnerMax - partnerMin + 1);
-    
-    laneScores[myLane] = laneScore;
+
+    laneScores[myLane] = comboSum / (partnerMax - partnerMin + 1);
 }
 
 //find the best lane to move towards
