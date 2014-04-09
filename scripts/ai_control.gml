@@ -1,94 +1,130 @@
-ai_reset_states();
+var laneThreats, threatDistances, poleDistances;
+
+for(var i = 0; i < NUM_LANES; ++i)
+{
+    laneThreats[i] = noone;
+    threatDistances[i] = y;
+    poleDistances[i] = y;
+}
 
 //locate all nearest threats in every lane
 with(oHarmful)
 {
-    if(bbox_bottom > oBoss.y && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_top > 0 && bbox_top < other.bbox_bottom) //if relevant
     {
         var distance = other.y - y;
-        if(distance < other.threatDistances[gridPos])
+        if(distance < threatDistances[gridPos])
         {
-            other.threatDistances[gridPos] = distance;
-            other.laneThreats[gridPos] = id;
+            threatDistances[gridPos] = distance;
+            laneThreats[gridPos] = id;
+        }
+        
+        if(object_index == oPole && distance < poleDistances[gridPos])
+        {
+            poleDistances[gridPos] = distance;
         }
     }
 }
 
-for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
+//evaluate each lane
+var holdingObject = instance_exists(g_caughtObject);
+var myMinLane, myMaxLane;
+
+if(isLeft)
 {
-    if(instance_place(x + (decisionIndex - 1) * LANE_WIDTH / 2, y - SCROLLING_SPEED * (LANE_WIDTH / SNAP_SPEED / 2), oHarmful) != noone)
+    myMinLane = 0;
+    if(holdingObject)
     {
-        decisionPenalties[decisionIndex] = -room_height;
+        myMaxLane = NUM_LANES - 3;
     }
     else
     {
-        decisionPenalties[decisionIndex] = 0;
+        myMaxLane = NUM_LANES - 2;
     }
-}
-
-var minLane, maxLane;
-var partnerLane = partner.gridPos;
-if(isLeft)
-{
-    minLane = max(0, partnerLane - CHAIN_LIMIT - 1);
-    maxLane = min(partner.gridPos, NUM_LANES);
 }
 else
 {
-    minLane = max(partnerLane + 1, NUM_LANES - 1);
-    maxLane = min(NUM_LANES, partnerLane + CHAIN_LIMIT + 2);
-}
-
-//evaluate each lane
-var currentLane = world_pos_to_grid(x);
-for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
-{
-    var moveDirection = sign(laneIndex - currentLane);
-    var decisionIndex = moveDirection + 1;
-    var chainLength = abs(laneIndex - partnerLane) - 1;
-    var chainBonus = 0;
-    lanePenalties[laneIndex] = decisionPenalties[decisionIndex];
-    switch(chainLength)
+    if(holdingObject)
     {
-    case 0:
-        chainBonus = -100;
-    break;
-    case 1:
-        chainBonus = 100;
-    break;
-    case 2:
-        chainBonus = 50;
-    break;
-    case 3:
-        chainBonus = -160;
-    break;
-    default:
-        chainBonus = -250;
-    break;
+        myMinLane = 3;
     }
-    if((isLeft && laneIndex >= partnerLane) || (!isLeft && laneIndex <= partnerLane))
+    else
     {
-        chainBonus = -250;
+        myMinLane = 2;
     }
     
-    var nextLane = currentLane + moveDirection;
-    var laneScore = threatDistances[laneIndex] + threatDistances[nextLane] + chainBonus;
-    laneScores[laneIndex] = laneScore;
-    if(laneScore > moveScores[decisionIndex])
-    {
-        moveScores[decisionIndex] = laneScore;
-    }
+    myMaxLane = NUM_LANES - 1;
 }
 
-var bestScore = moveScores[0];
-var bestDecision = 0;
-for(var decisionIndex = 1; decisionIndex < 3; ++decisionIndex)
+var laneScores;
+for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
 {
-    if(moveScores[decisionIndex] > bestScore)
+    laneScores[laneIndex] = 0;
+}
+
+
+for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
+{
+    //consider myself
+    var laneScore = 0;
+    laneScore += threatDistances[myLane];
+ 
+    //consider partner
+    var partnerMin, partnerMax;
+    if(isLeft)
     {
-        bestScore = moveScores[decisionIndex];
-        bestDecision = decisionIndex;
+        if(holdingObject)
+        {
+            partnerMin = myLane + 2;
+        }
+        else
+        {
+            partnerMin = myLane + 1;
+        }
+        partnerMax = min(NUM_LANES - 1, myLane + 4);
+    }
+    else
+    {
+        partnerMin = max(0, myLane - 4);
+        if(holdingObject)
+        {
+            partnerMax = myLane - 2;
+        }
+        else
+        {
+            partnerMax = myLane - 1;
+        }
+    }
+    
+    var partnerSum = 0;
+    for(var partnerLane = partnerMin; partnerLane <= partnerMax; ++partnerLane)
+    {
+        partnerSum += threatDistances[partnerLane];    
+    }
+    laneScore += partnerSum / (partnerMax - partnerMin + 1);
+    
+    laneScores[myLane] = laneScore;
+}
+
+//find the best lane to move towards
+//Assume current lane is best to avoid unnecesasry movement
+var bestScore = laneScores[gridPos];
+var bestLane = gridPos;
+for(var i = 0; i < NUM_LANES; ++i)
+{
+    if(laneScores[i] > bestScore)
+    {
+        bestScore = laneScores[i];
+        bestLane = i;
     }
 }
 
-return bestDecision - 1;
+for(var i = 0; i < NUM_LANES; ++i)
+{
+    debug_vars[i] = threatDistances[i];
+    debug_vars2[i] = laneScores[i];
+}
+
+debug_var_head = partnerMax;
+
+return sign(bestLane - gridPos);

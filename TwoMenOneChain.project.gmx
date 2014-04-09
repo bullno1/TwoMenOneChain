@@ -104,7 +104,6 @@
         <script>scripts\player_init_ai_control.gml</script>
         <script>scripts\ai_control.gml</script>
         <script>scripts\ai_draw.gml</script>
-        <script>scripts\ai_reset_states.gml</script>
       </scripts>
     </scripts>
     <scripts name="grid">
