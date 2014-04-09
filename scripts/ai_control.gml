@@ -203,26 +203,41 @@ else
 if(holdingObject)
 {
     var bossPos = oBoss.gridPos;
-    if(isLeft)
+    
+    if(bossPos == g_caughtObject.gridPos)//can attack
     {
-        if(playerGap == 1 && bossPos < gridPos)
+        if(isLeft)
         {
             decisionScores[0] += 1;
         }
-        else if(playerGap == 2 && bossPos > gridPos)
+        else
         {
             decisionScores[2] += 1;
         }
     }
     else
-    {
-        if(playerGap == 1 && bossPos > gridPos)
+    {    
+        if(isLeft)
         {
-            decisionScores[2] += 1;
+            if(playerGap == 1 && bossPos < gridPos)
+            {
+                decisionScores[0] += 1;
+            }
+            else if(playerGap == 2 && bossPos > gridPos)
+            {
+                decisionScores[2] += 1;
+            }
         }
-        else if(playerGap == 2 && bossPos < gridPos)
+        else
         {
-            decisionScores[0] += 1;
+            if(playerGap == 1 && bossPos > gridPos)
+            {
+                decisionScores[2] += 1;
+            }
+            else if(playerGap == 2 && bossPos < gridPos)
+            {
+                decisionScores[0] += 1;
+            }
         }
     }
 }
