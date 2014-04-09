@@ -103,6 +103,7 @@
       <scripts name="ai">
         <script>scripts\player_init_ai_control.gml</script>
         <script>scripts\ai_control.gml</script>
+        <script>scripts\ai_draw.gml</script>
       </scripts>
     </scripts>
     <scripts name="grid">
@@ -178,6 +179,7 @@
       <object>objects\oPlayerProjectile</object>
       <object>objects\oPole</object>
       <object>objects\oElectric</object>
+      <object>objects\oObstacle</object>
     </objects>
     <objects name="level_editor">
       <object>objects\oEditor</object>
@@ -197,9 +199,9 @@
     <constant name="GRID_COLOR">(make_color(0, 0, 0))</constant>
     <constant name="CHAIN_LIMIT">3</constant>
     <constant name="SCROLLING_SPEED">2</constant>
-    <constant name="BOSS_PROJECTILE_SPEED">6</constant>
+    <constant name="BOSS_PROJECTILE_SPEED">8</constant>
     <constant name="BLINK_DURATION">1.2</constant>
-    <constant name="LAUNCH_SPEED">5</constant>
+    <constant name="LAUNCH_SPEED">8</constant>
     <constant name="MAX_HP">3</constant>
     <constant name="HP_DISTANCE">50</constant>
     <constant name="OBSTACLE_HEIGHT">31</constant>

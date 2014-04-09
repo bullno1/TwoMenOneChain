@@ -13,8 +13,8 @@ for(var i = 0; i < NUM_LANES; ++i)
     poleDistances[i] = y;
 }
 
-//locate all nearest threats in every lane
-with(oHarmful)
+//locate all nearest obstacles in every lane
+with(oObstacle)
 {
     if(bbox_top > 200 && bbox_top < other.bbox_bottom) //if relevant
     {
@@ -32,9 +32,18 @@ with(oHarmful)
     }
 }
 
-//evaluate each position combination
 var holdingObject = instance_exists(g_caughtObject);
 
+//locate boss's projectile
+var bossProjectile = noone;
+var hasBossProjectile = false;
+if(instance_number(oBossProjectile) > 0)
+{
+    bossProjectile = oBossProjectile.id;
+    hasBossProjectile = true;
+}
+
+//evaluate each position combination
 //find personal range
 var myMinLane, myMaxLane;
 if(isLeft)
@@ -53,11 +62,11 @@ else
 {
     if(holdingObject)
     {
-        myMinLane = 3;
+        myMinLane = 2;
     }
     else
     {
-        myMinLane = 2;
+        myMinLane = 1;
     }
     
     myMaxLane = NUM_LANES - 1;
@@ -114,8 +123,24 @@ for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
         {
             nearestPole = min(nearestPole, poleDistances[poleLane]);
         }
+        
+        //consider catching and dodging projectile
+        var bossProjectileBonus = 0;
+        var bossProjectileSafety = room_height;
+        if(hasBossProjectile)
+        {
+            var projectilePos = bossProjectile.gridPos;
+            if(poleMin < projectilePos && projectilePos < poleMax && poleMax - poleMin < 3 && bossProjectile.y < y)//can catch
+            {
+                bossProjectileBonus = 10;
+            }
+            else if(projectilePos == myLane || projectilePos == partnerLane)//dodge
+            {
+                bossProjectileSafety = y - bossProjectile.y;
+            }
+        }
 
-        comboSum += min(personalSafety, partnerSafety, nearestPole);
+        comboSum += min(personalSafety, partnerSafety, nearestPole, bossProjectileSafety) + bossProjectileBonus;
     }
 
     laneScores[myLane] = comboSum / (partnerMax - partnerMin + 1);
@@ -131,11 +156,12 @@ var decisionScores;
 var playerGap = player_gap();
 
 //consider moving left
+var reachedEdge = isLeft && gridPos == 0;
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = isLeft && playerGap == 3;
 
-if(blockedByPartner || blockedByObject || stoppedByChain)//Can't move left
+if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge)//Can't move left
 {
     decisionScores[0] = 0;
 }
@@ -146,18 +172,19 @@ else
     {
         bestLeftScore = max(bestLeftScore, laneScores[laneIndex]);
     }
-    decisionScores[0] = bestLeftScore;
+    decisionScores[0] = min(bestLeftScore, 300);
 }
 
 //consider staying
-decisionScores[1] = laneScores[gridPos];
+decisionScores[1] = min(laneScores[gridPos], 370);
 
 //consider moving right
+var reachedEdge = !isLeft && gridPos == NUM_LANES - 1;
 var blockedByPartner = isLeft && playerGap == 0;
 var blockedByObject = isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = !isLeft && playerGap == 3;
 
-if(blockedByPartner || blockedByObject || stoppedByChain)//Can't move right
+if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge)//Can't move right
 {
     decisionScores[2] = 0;
 }
@@ -168,7 +195,7 @@ else
     {
         bestRightScore = max(bestRightScore, laneScores[laneIndex]);
     }
-    decisionScores[2] = bestRightScore;
+    decisionScores[2] = min(bestRightScore, 370);
 }
 
 if(holdingObject)
@@ -181,22 +208,22 @@ else
     {
         if(isLeft)
         {
-            decisionScores[0] += 5;
+            decisionScores[0] += 1;
         }
         else
         {
-            decisionScores[2] += 5;
+            decisionScores[2] += 1;
         }
     }
     else if(currentGap > 1)
     {
         if(isLeft)
         {
-            decisionScores[2] += 5;
+            decisionScores[2] += 1;
         }
         else
         {
-            decisionScores[0] += 5;
+            decisionScores[0] += 1;
         }
     }
 }
