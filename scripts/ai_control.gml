@@ -16,7 +16,7 @@ for(var i = 0; i < NUM_LANES; ++i)
 //locate all nearest threats in every lane
 with(oHarmful)
 {
-    if(bbox_top > 0 && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_top > 200 && bbox_top < other.bbox_bottom) //if relevant
     {
         var distance = other.y - y;
         if(distance < threatDistances[gridPos])
@@ -171,6 +171,37 @@ else
     decisionScores[2] = bestRightScore;
 }
 
+if(holdingObject)
+{
+}
+else
+{
+    var currentGap = abs(gridPos - world_pos_to_grid(partner.xprevious)) - 1;
+    if(currentGap < 1)
+    {
+        if(isLeft)
+        {
+            decisionScores[0] += 5;
+        }
+        else
+        {
+            decisionScores[2] += 5;
+        }
+    }
+    else if(currentGap > 1)
+    {
+        if(isLeft)
+        {
+            decisionScores[2] += 5;
+        }
+        else
+        {
+            decisionScores[0] += 5;
+        }
+    }
+}
+
+//Find the best action
 var bestScore = decisionScores[1];
 var bestDecision = 1;
 for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
