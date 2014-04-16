@@ -48,28 +48,28 @@ if(instance_number(oBossProjectile) > 0)
 var myMinLane, myMaxLane;
 if(isLeft)
 {
-    myMinLane = 0;
+    myMinLane = max(0, partner.gridPos - 4);
     if(holdingObject)
     {
-        myMaxLane = NUM_LANES - 3;
+        myMaxLane = partner.gridPos - 2;
     }
     else
     {
-        myMaxLane = NUM_LANES - 2;
+        myMaxLane = partner.gridPos - 1;
     }
 }
 else
 {
     if(holdingObject)
     {
-        myMinLane = 2;
+        myMinLane = partner.gridPos + 2;
     }
     else
     {
-        myMinLane = 1;
+        myMinLane = partner.gridPos + 1;
     }
     
-    myMaxLane = NUM_LANES - 1;
+    myMaxLane = min(NUM_LANES - 1, partner.gridPos + 4);
 }
 
 for(var laneIndex = 0; laneIndex < NUM_LANES; ++laneIndex)
