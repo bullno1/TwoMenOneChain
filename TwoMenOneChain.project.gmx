@@ -59,6 +59,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="gui">
+      <sprite>sprites\sprMainMenu</sprite>
+      <sprite>sprites\sprStartGame</sprite>
+      <sprite>sprites\sprExitGame</sprite>
+    </sprites>
     <sprites name="characters">
       <sprite>sprites\sprPosi</sprite>
       <sprite>sprites\sprNega</sprite>
@@ -185,8 +190,13 @@
       <object>objects\oEditor</object>
       <object>objects\oTile</object>
     </objects>
+    <objects name="ui">
+      <object>objects\oStartGame</object>
+      <object>objects\oExitGame</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmMainMenu</room>
     <room>rooms\rmGame</room>
     <room>rooms\rmEditor</room>
   </rooms>

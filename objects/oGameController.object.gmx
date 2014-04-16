@@ -63,13 +63,13 @@ else
 }
 
 var timeToEnd = top / SCROLLING_SPEED;
-alarm[0] = timeToEnd + room_height / SCROLLING_SPEED + 60;
+alarm[0] = timeToEnd + 60;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="2">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
