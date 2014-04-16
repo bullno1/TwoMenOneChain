@@ -155,12 +155,11 @@ for(var i = 0; i < NUM_LANES; ++i)
 var playerGap = player_gap();
 
 //consider moving left
-var safeScore = 400;
 var reachedEdge = isLeft && gridPos == 0;
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = isLeft && playerGap == 3;
-var hitHarmful = instance_place(grid_pos_to_world(gridPos - 1), y + SCROLLING_SPEED, oHarmful) != noone;
+var hitHarmful = instance_place(grid_pos_to_world(gridPos - 1), y - SCROLLING_SPEED, oHarmful) != noone;
 
 if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge || hitHarmful)//Can't move left
 {
@@ -169,22 +168,31 @@ if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge || hitHa
 else
 {
     var bestLeftScore = 0;
-    for(var laneIndex = 0; laneIndex < gridPos; ++laneIndex)
+    for(var laneIndex = gridPos - 1; laneIndex >= 0; --laneIndex)
     {
-        bestLeftScore = max(bestLeftScore, laneScores[laneIndex]);
+        var hit1 = instance_place(grid_pos_to_world(laneIndex), y, oHarmful) != noone;
+        var hit2 = instance_place(grid_pos_to_world(laneIndex), y - (bbox_bottom - bbox_top), oHarmful) != noone;
+        if(hit1 || hit2)
+        {
+            break;
+        }
+        else
+        {
+            bestLeftScore = max(bestLeftScore, laneScores[laneIndex]);
+        }
     }
-    decisionScores[0] = min(bestLeftScore, safeScore);
+    decisionScores[0] = bestLeftScore;
 }
 
 //consider staying
-decisionScores[1] = min(laneScores[gridPos], safeScore);
+decisionScores[1] = laneScores[gridPos];
 
 //consider moving right
 var reachedEdge = !isLeft && gridPos == NUM_LANES - 1;
 var blockedByPartner = isLeft && playerGap == 0;
 var blockedByObject = isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = !isLeft && playerGap == 3;
-var hitHarmful = instance_place(grid_pos_to_world(gridPos + 1), y + SCROLLING_SPEED, oHarmful) != noone;
+var hitHarmful = instance_place(grid_pos_to_world(gridPos + 1), y - SCROLLING_SPEED, oHarmful) != noone;
 
 if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge || hitHarmful)//Can't move right
 {
@@ -195,9 +203,18 @@ else
     var bestRightScore = 0;
     for(var laneIndex = gridPos + 1; laneIndex < NUM_LANES; ++laneIndex)
     {
-        bestRightScore = max(bestRightScore, laneScores[laneIndex]);
+        var hit1 = instance_place(grid_pos_to_world(laneIndex), y, oHarmful) != noone;
+        var hit2 = instance_place(grid_pos_to_world(laneIndex), y - (bbox_bottom - bbox_top), oHarmful) != noone;
+        if(hit1 || hit2)
+        {
+            break;
+        }
+        else
+        {
+            bestRightScore = max(bestRightScore, laneScores[laneIndex]);
+        }
     }
-    decisionScores[2] = min(bestRightScore, safeScore);
+    decisionScores[2] = bestRightScore;
 }
 
 //Add more weight to adjust distance between players
@@ -272,6 +289,7 @@ else
 //Find the best action
 var bestScore = decisionScores[1];
 var bestDecision = 1;
+
 for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 {
     if(decisionScores[decisionIndex] > bestScore)
