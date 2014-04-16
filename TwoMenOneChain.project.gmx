@@ -97,6 +97,7 @@
       <sprite>sprites\sprExplosion</sprite>
       <sprite>sprites\sprFire</sprite>
       <sprite>sprites\sprSmoke</sprite>
+      <sprite>sprites\sprBossExplode</sprite>
     </sprites>
     <sprite>sprites\sprElectric</sprite>
   </sprites>
@@ -145,6 +146,8 @@
       <script>scripts\execute_next_frame.gml</script>
       <script>scripts\on_lose_game.gml</script>
       <script>scripts\on_win_level.gml</script>
+      <script>scripts\on_win_game.gml</script>
+      <script>scripts\next_level.gml</script>
       <script>scripts\ensure_surface_exists.gml</script>
       <scripts name="level">
         <scripts name="generation">
@@ -192,6 +195,7 @@
       <object>objects\oBlinker</object>
       <object>objects\oExplosion</object>
       <object>objects\oFire</object>
+      <object>objects\oBossExplosion</object>
     </objects>
     <objects name="objects">
       <object>objects\oRock</object>
