@@ -215,6 +215,41 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch(g_currentDifficulty)
+{
+    case 0:
+        sprite_index = sprBoss;
+        shadowSprite = sprBossShadow;
+        break;
+    case 1:
+        sprite_index = sprBoss2;
+        shadowSprite = sprBossShadow2;
+        break;
+    case 2:
+        sprite_index = sprBoss3;
+        shadowSprite = sprBossShadow3;
+        break;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -396,7 +431,7 @@ if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1)
             <kind>1</kind>
             <string>hp -= 1;
 
-var fire = instance_create(x + irandom(80) - 40, y + irandom(80) - 40, oFire);
+var fire = instance_create(x + irandom(60) - 30, y + irandom(60) - 30, oFire);
 if(hp == 1)
 {
     fire.sprite_index = sprSmoke;
@@ -450,7 +485,7 @@ if(hp == 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprBossShadow, 0, x, shadowY);
+            <string>draw_sprite(shadowSprite, 0, x, shadowY);
 draw_self();
 </string>
           </argument>
