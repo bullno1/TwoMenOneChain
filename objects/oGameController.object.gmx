@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>currentDifficulty = 0;
-chunkQueue = ds_queue_create();
+            <string>chunkQueue = ds_queue_create();
 alarm[0] = 1;
 </string>
           </argument>
@@ -53,17 +52,17 @@ alarm[0] = 1;
             <string>var top;
 if(ds_queue_empty(chunkQueue))
 {
-    top = -map_generate_random_chunk(currentDifficulty);
+    top = -map_generate_random_chunk(g_currentDifficulty);
 }
 else
 {
-    var currentSet = g_mapChunks[currentDifficulty];
+    var currentSet = g_mapChunks[g_currentDifficulty];
     var chunk = ds_list_find_value(currentSet, ds_queue_dequeue(chunkQueue));
     top = -map_generate_chunk(chunk);
 }
 
 var timeToEnd = top / SCROLLING_SPEED;
-alarm[0] = timeToEnd + 60;
+alarm[0] = timeToEnd + room_height / SCROLLING_SPEED + 60;
 </string>
           </argument>
         </arguments>

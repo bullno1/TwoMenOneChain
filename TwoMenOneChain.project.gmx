@@ -86,6 +86,9 @@
       <sprite>sprites\sprChain2</sprite>
       <sprite>sprites\sprChain3</sprite>
     </sprites>
+    <sprites name="fx">
+      <sprite>sprites\sprExplosion</sprite>
+    </sprites>
     <sprite>sprites\sprElectric</sprite>
   </sprites>
   <backgrounds name="background">
@@ -132,6 +135,7 @@
       <script>scripts\destroy_if_flying_out.gml</script>
       <script>scripts\execute_next_frame.gml</script>
       <script>scripts\on_lose_game.gml</script>
+      <script>scripts\on_win_level.gml</script>
       <script>scripts\ensure_surface_exists.gml</script>
       <scripts name="level">
         <scripts name="generation">
@@ -177,6 +181,7 @@
     </objects>
     <objects name="fx">
       <object>objects\oBlinker</object>
+      <object>objects\oExplosion</object>
     </objects>
     <objects name="objects">
       <object>objects\oRock</object>
@@ -214,7 +219,7 @@
     <constant name="CHAIN_LIMIT">3</constant>
     <constant name="SCROLLING_SPEED">2</constant>
     <constant name="BOSS_PROJECTILE_SPEED">8</constant>
-    <constant name="BLINK_DURATION">1.2</constant>
+    <constant name="BLINK_DURATION">2.5</constant>
     <constant name="LAUNCH_SPEED">8</constant>
     <constant name="MAX_HP">4</constant>
     <constant name="HP_DISTANCE">50</constant>
