@@ -3,7 +3,7 @@
   <type>0</type>
   <xorig>25</xorig>
   <yorigin>25</yorigin>
-  <colkind>1</colkind>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
@@ -20,6 +20,6 @@
   <width>51</width>
   <height>51</height>
   <frames>
-    <frame index="0">images\sprEnergyBall_0.png</frame>
+    <frame index="0">images\sprPlayerBall_0.png</frame>
   </frames>
 </sprite>

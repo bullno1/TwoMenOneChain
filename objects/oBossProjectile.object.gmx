@@ -3,7 +3,7 @@
   <spriteName>sprEnergyBall</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-20</depth>
   <persistent>0</persistent>
   <parentName>oHarmful</parentName>
   <maskName>&lt;undefined&gt;</maskName>

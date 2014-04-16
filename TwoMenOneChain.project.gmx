@@ -68,13 +68,20 @@
     <sprites name="characters">
       <sprite>sprites\sprPosi</sprite>
       <sprite>sprites\sprNega</sprite>
-      <sprite>sprites\sprBoss</sprite>
-      <sprite>sprites\sprBossShadow</sprite>
+      <sprites name="boss">
+        <sprite>sprites\sprBoss</sprite>
+        <sprite>sprites\sprBossShadow</sprite>
+        <sprite>sprites\sprBoss2</sprite>
+        <sprite>sprites\sprBossShadow2</sprite>
+        <sprite>sprites\sprBoss3</sprite>
+        <sprite>sprites\sprBossShadow3</sprite>
+      </sprites>
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
       <sprite>sprites\sprPole</sprite>
       <sprite>sprites\sprEnergyBall</sprite>
+      <sprite>sprites\sprPlayerBall</sprite>
     </sprites>
     <sprites name="system">
       <sprite>sprites\sprDebugger</sprite>
@@ -88,6 +95,8 @@
     </sprites>
     <sprites name="fx">
       <sprite>sprites\sprExplosion</sprite>
+      <sprite>sprites\sprFire</sprite>
+      <sprite>sprites\sprSmoke</sprite>
     </sprites>
     <sprite>sprites\sprElectric</sprite>
   </sprites>
@@ -182,6 +191,7 @@
     <objects name="fx">
       <object>objects\oBlinker</object>
       <object>objects\oExplosion</object>
+      <object>objects\oFire</object>
     </objects>
     <objects name="objects">
       <object>objects\oRock</object>
@@ -203,11 +213,13 @@
       <object>objects\oMainMenu</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rmMainMenu</room>
     <room>rooms\rmGame</room>
     <room>rooms\rmEditor</room>
     <room>rooms\rmLose</room>
+    <room>rooms\rmTest</room>
   </rooms>
   <constants number="15">
     <constant name="ROAD_WIDTH">561</constant>

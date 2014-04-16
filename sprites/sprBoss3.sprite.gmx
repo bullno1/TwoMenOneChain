@@ -2,15 +2,15 @@
 <sprite>
   <type>0</type>
   <xorig>25</xorig>
-  <yorigin>25</yorigin>
-  <colkind>1</colkind>
+  <yorigin>37</yorigin>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>50</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>50</bbox_bottom>
+  <bbox_bottom>73</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,8 +18,8 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>51</width>
-  <height>51</height>
+  <height>74</height>
   <frames>
-    <frame index="0">images\sprEnergyBall_0.png</frame>
+    <frame index="0">images\sprBoss3_0.png</frame>
   </frames>
 </sprite>

@@ -320,6 +320,13 @@ if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1)
           <argument>
             <kind>1</kind>
             <string>hp -= 1;
+
+var fire = instance_create(x + irandom(100) - 40, y + irandom(100) - 40, oFire);
+if(hp == 1)
+{
+    fire.sprite_index = sprSmoke;
+}
+
 if(hp == 0)
 {
     on_win_level();
