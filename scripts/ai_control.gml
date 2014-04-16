@@ -155,13 +155,14 @@ for(var i = 0; i < NUM_LANES; ++i)
 var playerGap = player_gap();
 
 //consider moving left
+var safeScore = 400;
 var reachedEdge = isLeft && gridPos == 0;
 var blockedByPartner = !isLeft && playerGap == 0;
 var blockedByObject = !isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = isLeft && playerGap == 3;
-var safeScore = 300;
+var hitHarmful = instance_place(grid_pos_to_world(gridPos - 1), y + SCROLLING_SPEED, oHarmful) != noone;
 
-if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge)//Can't move left
+if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge || hitHarmful)//Can't move left
 {
     decisionScores[0] = 0;
 }
@@ -183,8 +184,9 @@ var reachedEdge = !isLeft && gridPos == NUM_LANES - 1;
 var blockedByPartner = isLeft && playerGap == 0;
 var blockedByObject = isLeft && playerGap == 1 && holdingObject;
 var stoppedByChain = !isLeft && playerGap == 3;
+var hitHarmful = instance_place(grid_pos_to_world(gridPos + 1), y + SCROLLING_SPEED, oHarmful) != noone;
 
-if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge)//Can't move right
+if(blockedByPartner || blockedByObject || stoppedByChain || reachedEdge || hitHarmful)//Can't move right
 {
     decisionScores[2] = 0;
 }
@@ -215,7 +217,7 @@ if(holdingObject)
         }
     }
     else
-    {    
+    {
         if(isLeft)
         {
             if(playerGap == 1 && bossPos <= gridPos)

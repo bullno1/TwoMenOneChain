@@ -14,8 +14,9 @@ var gapAfterMove = abs(nextGridPos - partner.gridPos) - 1;
 var exceedChainLimit = gapAfterMove > CHAIN_LIMIT;
 var holdingObject = instance_exists(g_caughtObject);
 var blockedByCaughtObject = holdingObject && gapAfterMove == 0;
+var hitHarmful = instance_place(grid_pos_to_world(nextGridPos), y, oHarmful);
 
-if(outOfBound || overlapPartner || exceedChainLimit || blockedByCaughtObject)
+if(outOfBound || overlapPartner || exceedChainLimit || blockedByCaughtObject || hitHarmful)
 {
     return false;
 }
