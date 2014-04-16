@@ -47,7 +47,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>ord('B')</string>
+            <string>ord('D')</string>
           </argument>
           <argument>
             <kind>0</kind>
