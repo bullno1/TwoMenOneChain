@@ -63,6 +63,7 @@
       <sprite>sprites\sprMainMenu</sprite>
       <sprite>sprites\sprStartGame</sprite>
       <sprite>sprites\sprExitGame</sprite>
+      <sprite>sprites\sprRetry</sprite>
     </sprites>
     <sprites name="characters">
       <sprite>sprites\sprPosi</sprite>
@@ -193,12 +194,15 @@
     <objects name="ui">
       <object>objects\oStartGame</object>
       <object>objects\oExitGame</object>
+      <object>objects\oRetry</object>
+      <object>objects\oMainMenu</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMainMenu</room>
     <room>rooms\rmGame</room>
     <room>rooms\rmEditor</room>
+    <room>rooms\rmLose</room>
   </rooms>
   <constants number="15">
     <constant name="ROAD_WIDTH">561</constant>
