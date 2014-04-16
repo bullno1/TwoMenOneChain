@@ -321,7 +321,7 @@ if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1)
             <kind>1</kind>
             <string>hp -= 1;
 
-var fire = instance_create(x + irandom(100) - 40, y + irandom(100) - 40, oFire);
+var fire = instance_create(x + irandom(80) - 40, y + irandom(80) - 40, oFire);
 if(hp == 1)
 {
     fire.sprite_index = sprSmoke;
@@ -377,6 +377,29 @@ if(hp == 0)
             <kind>1</kind>
             <string>draw_sprite(sprBossShadow, 0, x, y + 100);
 draw_self();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="75">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_perform(ev_collision, oPlayerProjectile);
 </string>
           </argument>
         </arguments>
