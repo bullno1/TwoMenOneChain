@@ -218,7 +218,7 @@ if(holdingObject)
     {    
         if(isLeft)
         {
-            if(playerGap == 1 && bossPos < gridPos)
+            if(playerGap == 1 && bossPos <= gridPos)
             {
                 decisionScores[0] += 1;
             }
@@ -229,7 +229,7 @@ if(holdingObject)
         }
         else
         {
-            if(playerGap == 1 && bossPos > gridPos)
+            if(playerGap == 1 && bossPos >= gridPos)
             {
                 decisionScores[2] += 1;
             }
@@ -280,7 +280,7 @@ for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 }
 
 //Prevent jerking
-if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 800)//two conflicting decisions
+if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 500)//two conflicting decisions
 {
     return 0;
 }
