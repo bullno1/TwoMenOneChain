@@ -220,7 +220,11 @@ else
 //Add more weight to adjust distance between players
 if(holdingObject)
 {
-    var bossPos = oBoss.gridPos;
+    var bossPos = -1000;
+    if(instance_number(oBoss) > 0)
+    {
+        bossPos = oBoss.gridPos;
+    }
     
     if(bossPos == g_caughtObject.gridPos)//can attack
     {
