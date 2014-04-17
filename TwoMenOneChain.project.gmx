@@ -228,6 +228,7 @@
       <object>objects\oRetry</object>
       <object>objects\oMainMenu</object>
       <object>objects\oHowToPlay</object>
+      <object>objects\oTutNext</object>
       <objects name="stillObj">
         <object>objects\oStillBoss</object>
         <object>objects\oStillPosi</object>
@@ -237,7 +238,6 @@
         <object>objects\oGameOver</object>
         <object>objects\oYouWin</object>
       </objects>
-      <object>objects\oTutNext</object>
     </objects>
   </objects>
   <rooms name="rooms">
