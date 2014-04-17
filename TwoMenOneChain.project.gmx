@@ -71,6 +71,8 @@
       <sprite>sprites\sprExitGame</sprite>
       <sprite>sprites\sprRetry</sprite>
       <sprite>sprites\sprHowToPlay</sprite>
+      <sprite>sprites\sprGameOver</sprite>
+      <sprite>sprites\sprYouWin</sprite>
     </sprites>
     <sprites name="characters">
       <sprite>sprites\sprPosi</sprite>
@@ -112,7 +114,9 @@
     <background>background\bgRun</background>
     <background>background\bgTut1</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pathElectrocuted</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="player">
       <script>scripts\player_init.gml</script>
@@ -230,6 +234,8 @@
         <object>objects\oStillNega</object>
         <object>objects\oStillChain</object>
         <object>objects\oStillShadow</object>
+        <object>objects\oGameOver</object>
+        <object>objects\oYouWin</object>
       </objects>
       <object>objects\oTutNext</object>
     </objects>
