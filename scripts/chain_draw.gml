@@ -18,4 +18,4 @@ case 3:
 break;
 }
 
-draw_sprite(sprite, 0, drawX, drawY);
+draw_sprite(sprite, image_index, drawX, drawY);

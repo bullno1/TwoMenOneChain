@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>36</bbox_left>
-  <bbox_right>217</bbox_right>
-  <bbox_top>16</bbox_top>
-  <bbox_bottom>27</bbox_bottom>
+  <bbox_left>28</bbox_left>
+  <bbox_right>225</bbox_right>
+  <bbox_top>11</bbox_top>
+  <bbox_bottom>38</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -21,5 +21,6 @@
   <height>51</height>
   <frames>
     <frame index="0">images\sprChain3_0.png</frame>
+    <frame index="1">images\sprChain3_1.png</frame>
   </frames>
 </sprite>

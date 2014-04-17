@@ -224,7 +224,6 @@
       </objects>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rmMainMenu</room>
     <room>rooms\rmGame</room>
