@@ -431,7 +431,7 @@ if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1)
             <kind>1</kind>
             <string>hp -= 1;
 
-var fire = instance_create(x + irandom(60) - 30, y + irandom(60) - 30, oFire);
+var fire = instance_create(x + irandom(30) - 15, y + irandom(60) - 30, oFire);
 if(hp == 1)
 {
     fire.sprite_index = sprSmoke;
