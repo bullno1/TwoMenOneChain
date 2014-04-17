@@ -16,7 +16,7 @@ for(var i = 0; i < NUM_LANES; ++i)
 //locate all nearest obstacles in every lane
 with(oObstacle)
 {
-    if(bbox_top > 200 && bbox_top < other.bbox_bottom) //if relevant
+    if(bbox_top > 300 && bbox_top < other.bbox_bottom) //if relevant
     {
         var distance = other.y - y;
         if(distance < threatDistances[gridPos])
@@ -132,7 +132,7 @@ for(var myLane = myMinLane; myLane <= myMaxLane; ++myLane)
             var projectilePos = bossProjectile.gridPos;
             if(poleMin < projectilePos && projectilePos < poleMax && poleMax - poleMin < 3 && bossProjectile.y < y)//can catch
             {
-                bossProjectileBonus = 5;
+                bossProjectileBonus = 80;
             }
             else if(projectilePos == myLane || projectilePos == partnerLane)//dodge
             {
@@ -230,11 +230,11 @@ if(holdingObject)
     {
         if(isLeft)
         {
-            decisionScores[0] += 1;
+            decisionScores[0] += 50;
         }
         else
         {
-            decisionScores[2] += 1;
+            decisionScores[2] += 50;
         }
     }
     else
@@ -304,7 +304,7 @@ for(var decisionIndex = 0; decisionIndex < 3; ++decisionIndex)
 }
 
 //Prevent jerking
-if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 500)//two conflicting decisions
+if(lastDecision + bestDecision == 2 && currentTime - lastMoveTime < 300)//two conflicting decisions
 {
     return 0;
 }
