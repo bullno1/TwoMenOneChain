@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1280</width>
   <height>720</height>
-  <vsnap>100</vsnap>
-  <hsnap>50</hsnap>
+  <vsnap>20</vsnap>
+  <hsnap>10</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -61,8 +61,9 @@ audio_play_sound(sndLevel3, 10, true);</code>
     <instance objName="oStillPosi" x="580" y="650" name="inst_314D35C0" locked="0" code="image_speed = 0.3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oStillShadow" x="650" y="200" name="inst_416FF6AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oStillNega" x="754" y="650" name="inst_DFD0CECD" locked="0" code="image_speed = 0.3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oStartGame" x="638" y="325" name="inst_411C8F4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oExitGame" x="560" y="375" name="inst_2156F654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oStartGame" x="649" y="339" name="inst_411C8F4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oExitGame" x="568" y="433" name="inst_2156F654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oHowToPlay" x="651" y="396" name="inst_5A2D3736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

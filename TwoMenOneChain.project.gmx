@@ -70,6 +70,7 @@
       <sprite>sprites\sprStartGame</sprite>
       <sprite>sprites\sprExitGame</sprite>
       <sprite>sprites\sprRetry</sprite>
+      <sprite>sprites\sprHowToPlay</sprite>
     </sprites>
     <sprites name="characters">
       <sprite>sprites\sprPosi</sprite>
@@ -109,6 +110,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgRun</background>
+    <background>background\bgTut1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -221,6 +223,7 @@
       <object>objects\oExitGame</object>
       <object>objects\oRetry</object>
       <object>objects\oMainMenu</object>
+      <object>objects\oHowToPlay</object>
       <objects name="stillObj">
         <object>objects\oStillBoss</object>
         <object>objects\oStillPosi</object>
@@ -228,6 +231,7 @@
         <object>objects\oStillChain</object>
         <object>objects\oStillShadow</object>
       </objects>
+      <object>objects\oTutNext</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -236,6 +240,7 @@
     <room>rooms\rmEditor</room>
     <room>rooms\rmLose</room>
     <room>rooms\rmWin</room>
+    <room>rooms\rmTut1</room>
     <room>rooms\rmTest</room>
   </rooms>
   <constants number="15">
