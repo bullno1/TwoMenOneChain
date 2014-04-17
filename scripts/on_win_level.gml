@@ -1,7 +1,8 @@
 with(oBoss)
 {  
     alarm[0] = -1;
-    vspeed = 1;    
+    vspeed = 1;
+    dying = true;
 }
 
 with(oHarmful)

@@ -270,7 +270,7 @@
             <kind>1</kind>
             <string>alarm[1] = throwInterval * 60;
 
-if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1)
+if(gridPos != 0 &amp;&amp; gridPos != NUM_LANES - 1 &amp;&amp; !dying)
 {
     instance_create(x, y, oBossProjectile);
 }
