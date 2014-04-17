@@ -113,6 +113,7 @@
   <backgrounds name="background">
     <background>background\bgRun</background>
     <background>background\bgTut1</background>
+    <background>background\bgTut2</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathElectrocuted</path>
@@ -247,6 +248,7 @@
     <room>rooms\rmLose</room>
     <room>rooms\rmWin</room>
     <room>rooms\rmTut1</room>
+    <room>rooms\rmTut2</room>
     <room>rooms\rmTest</room>
   </rooms>
   <constants number="15">
