@@ -62,7 +62,7 @@ else
 }
 
 var timeToEnd = top / SCROLLING_SPEED;
-alarm[0] = timeToEnd + room_height / SCROLLING_SPEED + 60;
+alarm[0] = timeToEnd + room_height / SCROLLING_SPEED + 30;
 </string>
           </argument>
         </arguments>
