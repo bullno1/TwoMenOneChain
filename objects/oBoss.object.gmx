@@ -441,6 +441,8 @@ if(hp == 0)
 {
     on_win_level();
 }
+
+audio_play_sound(sndHit, 11, false);
 </string>
           </argument>
         </arguments>

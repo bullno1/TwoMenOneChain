@@ -27,6 +27,20 @@
             <kind>1</kind>
             <string>chunkQueue = ds_queue_create();
 alarm[0] = 1;
+
+audio_stop_all();
+switch(g_currentDifficulty)
+{
+    case 0:
+        audio_play_sound(sndLevel1, 10, true);
+        break;
+    case 1:
+        audio_play_sound(sndLevel2, 10, true);
+        break;
+    case 2:
+        audio_play_sound(sndLevel3, 10, true);
+        break;
+}
 </string>
           </argument>
         </arguments>

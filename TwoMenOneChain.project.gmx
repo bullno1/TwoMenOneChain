@@ -57,7 +57,13 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndLevel1</sound>
+    <sound>sound\sndLevel2</sound>
+    <sound>sound\sndLevel3</sound>
+    <sound>sound\sndHit</sound>
+    <sound>sound\sndExplosion</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="gui">
       <sprite>sprites\sprMainMenu</sprite>

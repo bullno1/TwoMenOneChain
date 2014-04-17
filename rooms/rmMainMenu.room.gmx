@@ -11,7 +11,10 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>globalvar g_currentDifficulty;
-g_currentDifficulty = 0;</code>
+g_currentDifficulty = 0;
+
+audio_stop_all();
+audio_play_sound(sndLevel3, 10, true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>
