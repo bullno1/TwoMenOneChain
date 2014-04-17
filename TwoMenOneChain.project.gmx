@@ -215,6 +215,13 @@
       <object>objects\oExitGame</object>
       <object>objects\oRetry</object>
       <object>objects\oMainMenu</object>
+      <objects name="stillObj">
+        <object>objects\oStillBoss</object>
+        <object>objects\oStillPosi</object>
+        <object>objects\oStillNega</object>
+        <object>objects\oStillChain</object>
+        <object>objects\oStillShadow</object>
+      </objects>
     </objects>
   </objects>
   <timelines name="timelines"/>
@@ -223,6 +230,7 @@
     <room>rooms\rmGame</room>
     <room>rooms\rmEditor</room>
     <room>rooms\rmLose</room>
+    <room>rooms\rmWin</room>
     <room>rooms\rmTest</room>
   </rooms>
   <constants number="15">
