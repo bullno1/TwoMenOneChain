@@ -85,6 +85,7 @@
         <sprite>sprites\sprBoss3</sprite>
         <sprite>sprites\sprBossShadow3</sprite>
       </sprites>
+      <sprite>sprites\sprElectrocuted</sprite>
     </sprites>
     <sprites name="objects">
       <sprite>sprites\sprRock</sprite>
@@ -238,6 +239,7 @@
         <object>objects\oStillShadow</object>
         <object>objects\oGameOver</object>
         <object>objects\oYouWin</object>
+        <object>objects\oElectrocuted</object>
       </objects>
     </objects>
   </objects>

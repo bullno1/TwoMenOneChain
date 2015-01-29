@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0.5</string>
+            <string>0.25</string>
           </argument>
         </arguments>
       </action>
